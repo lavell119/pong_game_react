@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header.js'
 import Seperator from './Seperator'
+import DisplayHeader from './DisplayHeader.js'
 
 
 
@@ -9,6 +10,7 @@ function App() {
     <>
   <Header />
   <Seperator />
+  <DisplayHeader />
     </>
 )
 }

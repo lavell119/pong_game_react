@@ -494,7 +494,7 @@ body {
     background: rgb(29, 29, 29);
 }
 
-.tables-header-strip {
+.display-header {
     background: rgb(48, 48, 48);
     height: 36px;
     display: flex;
