@@ -666,6 +666,14 @@ a {
 }
 
 .sidebar-ele:hover {
+    background: rgb(168, 168, 168);
+}
+
+.display-ele {
+    background: yellow;
+}
+
+.sidebar-ele:hover {
     background-color: rgb(36, 36, 36);
 }
 
@@ -769,3 +777,6 @@ a {
     width: 70%;
 }
 
+#root {
+    height: 100vh;
+}
