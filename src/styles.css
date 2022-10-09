@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "calibri";
 }
 
 body {
@@ -669,10 +670,6 @@ a {
     background: rgb(168, 168, 168);
 }
 
-.display-ele {
-    background: yellow;
-}
-
 .sidebar-ele:hover {
     background-color: rgb(36, 36, 36);
 }
@@ -684,6 +681,11 @@ a {
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.change-email {
+    color: white;
 }
 
 .widget {
@@ -732,6 +734,9 @@ a {
 .display {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hide {
@@ -779,4 +784,32 @@ a {
 
 #root {
     height: 100vh;
+}
+
+.change-email-row {
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 21px;
+    position: relative;
+    bottom: 40px;
+}
+
+.display-element {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-information {
+    align-items: flex-start;
+}
+
+.change-email-input {
+    width: 580px;
+    height: 32px;
 }
