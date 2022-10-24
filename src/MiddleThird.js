@@ -3,6 +3,7 @@ import AccountInformation from "./AccountInformation"
 import ChangePassword from "./ChangePassword"
 import ChangeEmail from "./ChangeEmail"
 import Tables from "./Tables"
+import { useSelector } from "react-redux"
 
 export default function MiddleThird() {
     let [displayState, changeDisplayState]=useState('initial state')
