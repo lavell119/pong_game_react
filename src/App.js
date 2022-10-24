@@ -18,7 +18,6 @@ function App() {
   <MiddleThird />
   <div className="bottom-third">
   </div>
-  
     </>
 )
 }

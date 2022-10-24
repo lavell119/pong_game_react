@@ -2,6 +2,7 @@ import { useState } from "react"
 import AccountInformation from "./AccountInformation"
 import ChangePassword from "./ChangePassword"
 import ChangeEmail from "./ChangeEmail"
+import Tables from "./Tables"
 
 export default function MiddleThird() {
     let [displayState, changeDisplayState]=useState('initial state')
@@ -12,12 +13,12 @@ export default function MiddleThird() {
     <div className="sidebar">
         <div className="sidebar-ele ai" onClick={ ()=>{changeDisplayState(<AccountInformation />)}}>Account Information</div>
         <div className="sidebar-ele cp" onClick={ ()=>{changeDisplayState(<ChangePassword />)}}>Change Password</div>
-        <div className="sidebar-ele as" onClick={ ()=>{changeDisplayState('scfe')}}>Account Security</div>
+        <div className="sidebar-ele as">Account Security</div>
         <div className="sidebar-ele ce" onClick={ ()=>{changeDisplayState(<ChangeEmail />)}}>Change E-mail</div>
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">
-        <div className="display-element">{displayState}</div>
+        {displayState}
     </div>
     </div>
 </>
