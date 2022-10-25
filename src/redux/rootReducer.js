@@ -1,5 +1,7 @@
+import Tables from "../components/Tables"
+
 const initState = {
-    display: <tables />
+    display: <Tables />
 }
 
 const rootReducer = (state = initState, action) => {

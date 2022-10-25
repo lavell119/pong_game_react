@@ -6,8 +6,9 @@ import Tables from "./Tables"
 import { useSelector } from "react-redux"
 
 export default function MiddleThird() {
-    let [displayState, changeDisplayState]=useState('initial state')
+    let DisplayerState=useSelector(state => state.display)
 
+    let [displayState, changeDisplayState]=useState('initial state')
     return (
         <>
     <div className="middle-third">
@@ -18,8 +19,8 @@ export default function MiddleThird() {
         <div className="sidebar-ele ce" onClick={ ()=>{changeDisplayState(<ChangeEmail />)}}>Change E-mail</div>
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
-    <div className="display">
-        {displayState}
+    <div className="display">   
+        {DisplayerState}
     </div>
     </div>
 </>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header.js'
-import Seperator from './Seperator'
+import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
 import MiddleThird from './MiddleThird.js'
 
