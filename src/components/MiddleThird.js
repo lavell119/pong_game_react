@@ -3,12 +3,13 @@ import AccountInformation from "./AccountInformation"
 import ChangePassword from "./ChangePassword"
 import ChangeEmail from "./ChangeEmail"
 import Tables from "./Tables"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 export default function MiddleThird() {
-    let DisplayerState=useSelector(state => state.display)
+/* let DisplayerState=useSelector(state => state.display) */
 
     let [displayState, changeDisplayState]=useState('initial state')
+    const dispatch = useDispatch()
     return (
         <>
     <div className="middle-third">
@@ -20,9 +21,9 @@ export default function MiddleThird() {
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">   
-        {DisplayerState}
+        {displayState}
     </div>
     </div>
-</>
+        </>
     )
 }
