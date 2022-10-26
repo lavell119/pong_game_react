@@ -4,9 +4,6 @@ import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
 import MiddleThird from './MiddleThird.js'
 
-
-
-
 function App() {
   return (
     <>
