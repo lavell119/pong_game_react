@@ -6,7 +6,7 @@ import Tables from "./Tables"
 import { useSelector, useDispatch } from "react-redux"
 
 export default function MiddleThird() {
-/* let DisplayerState=useSelector(state => state.display) */
+    const displayerState=useSelector(state => state.display)
 
     let [displayState, changeDisplayState]=useState('initial state')
     const dispatch = useDispatch()
@@ -21,7 +21,7 @@ export default function MiddleThird() {
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">   
-        {displayState}
+        {displayerState}
     </div>
     </div>
         </>
