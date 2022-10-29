@@ -1,9 +1,10 @@
+import AccountMiddleThird from "../components/AccountMiddleThird"
 import ChangePassword from "../components/ChangePassword"
 import Tables from "../components/Tables"
 
 const initState = {
-    display: ''
-  
+    display: '',
+    middleThirdOptions: <AccountMiddleThird />
 }
 
 const rootReducer = (state = initState, action) => {

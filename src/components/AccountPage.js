@@ -3,23 +3,19 @@ import Header from './Header.js'
 import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
 import MiddleThird from './MiddleThird.js'
-import AccountMiddleThird from './AccountMiddleThird.js'
-import { useSelector } from 'react-redux'
 
-function App() {
-  const middleThirdToggle=useSelector(state => state.middleThirdOptions)
+function AccountPage() {
   return (
     <>
   <div className="top-third">
   <Header />
-  <Seperator />
   <DisplayHeader />
   </div>
-  {middleThirdToggle}
+  <MiddleThird />
   <div className="bottom-third">
   </div>
     </>
 )
 }
 
-export default App;
+export default AccountPage;
