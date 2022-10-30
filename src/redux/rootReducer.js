@@ -34,12 +34,14 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 middleThirdOptions: <AccountMiddleThird />,
-                accountDisplay: <AccountInformation />
+                accountDisplay: <AccountInformation />,
+                title: 'Account'
             }
         case "LOAD_ACCOUNT_SNIP":
             return {
                 ...state,
-                accountDisplay: action.payload
+                accountDisplay: action.payload.snippet,
+                title: action.payload.title
             }
         default: 
             return state

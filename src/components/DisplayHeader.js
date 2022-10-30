@@ -15,7 +15,7 @@ export default function DisplayHeader() {
             <div className="home-button" onClick={()=>{dispatch({type: "LOAD_TABLES" })}}>
                 Home
             </div>
-            <div className="side-title" onClick={()=>{dispatch({type: "LOAD_ACCOUNT" })}}>Account</div>
+            <div className="side-title">Account</div>
         </div>
     </div>
     )
