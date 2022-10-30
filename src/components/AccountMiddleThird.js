@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from "react-redux"
 
 export default function AccountMiddleThird() {
     const displayerState=useSelector(state => state.display)
+    const accountDisplay=useSelector(state => state.accountDisplay)
+
 
     let [displayState, changeDisplayState]=useState('initial state')
     const dispatch = useDispatch()
@@ -21,7 +23,7 @@ export default function AccountMiddleThird() {
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">   
-        {displayState}
+        {accountDisplay}
     </div>
     </div>
         </>

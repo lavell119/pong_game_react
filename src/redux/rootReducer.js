@@ -6,7 +6,8 @@ import Tables from "../components/Tables"
 const initState = {
     display: '',
     middleThirdOptions: <MiddleThird />,
-    title: 'Lobby'
+    title: 'Lobby',
+    accountDisplay: 'pppppp'
 }
 
 const rootReducer = (state = initState, action) => {
