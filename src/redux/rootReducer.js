@@ -1,10 +1,11 @@
 import AccountMiddleThird from "../components/AccountMiddleThird"
+import MiddleThird from "../components/MiddleThird"
 import ChangePassword from "../components/ChangePassword"
 import Tables from "../components/Tables"
 
 const initState = {
     display: '',
-    middleThirdOptions: <AccountMiddleThird />
+    middleThirdOptions: <MiddleThird />
 }
 
 const rootReducer = (state = initState, action) => {
