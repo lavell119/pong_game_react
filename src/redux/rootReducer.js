@@ -34,7 +34,7 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 middleThirdOptions: <AccountMiddleThird />,
-                title: 'Account'
+                accountDisplay: <AccountInformation />
             }
         case "LOAD_ACCOUNT_SNIP":
             return {
