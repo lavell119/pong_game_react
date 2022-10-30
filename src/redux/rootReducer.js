@@ -22,6 +22,7 @@ const rootReducer = (state = initState, action) => {
         case "LOAD_TABLES":
             return {
                 ...state,
+                middleThirdOptions: <MiddleThird />,
                 display: <Tables />
             }
         case "LOAD_ACCOUNT":
