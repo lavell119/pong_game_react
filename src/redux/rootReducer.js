@@ -5,7 +5,8 @@ import Tables from "../components/Tables"
 
 const initState = {
     display: '',
-    middleThirdOptions: <MiddleThird />
+    middleThirdOptions: <MiddleThird />,
+    title: 'Lobby'
 }
 
 const rootReducer = (state = initState, action) => {
@@ -23,12 +24,14 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 middleThirdOptions: <MiddleThird />,
-                display: <Tables />
+                display: <Tables />,
+                title: 'Lobby'
             }
         case "LOAD_ACCOUNT":
             return {
                 ...state,
-                middleThirdOptions: <AccountMiddleThird />
+                middleThirdOptions: <AccountMiddleThird />,
+                title: 'Account'
             }
         default: 
             return state
