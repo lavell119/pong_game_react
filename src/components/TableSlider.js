@@ -14,25 +14,21 @@ export default function TableSlider() {
              <div className="slide slide_1">
                 <div className="slide-content">
                    <h2>Slide 1</h2>
-                   <p>Content for Slide 1</p>
                 </div>
              </div>
              <div className="slide slide_2">
                 <div className="slide-content">
                    <h2>Slide 2</h2>
-                   <p>Content for Slide 2</p>
                 </div>
              </div>
              <div className="slide slide_3">
                 <div className="slide-content">
                    <h2>Slide 3</h2>
-                   <p>Content for Slide 3</p>
                 </div>
              </div>
              <div className="slide slide_4">
                 <div className="slide-content">
                    <h2>Slide 4</h2>
-                   <p>Content for Slide 4</p>
                 </div>
              </div>
           </div>
