@@ -1,9 +1,10 @@
 import { useState } from "react"
-import AccountInformation from "./AccountInformation"
-import ChangePassword from "./ChangePassword"
-import ChangeEmail from "./ChangeEmail"
 import Tables from "./Tables"
 import { useSelector, useDispatch } from "react-redux"
+import ChangePassword from "../components/ChangePassword"
+import AccountInformation from "../components/AccountInformation"
+import ChangeEmail from "../components/ChangeEmail"
+
 
 export default function AccountMiddleThird() {
     const displayerState=useSelector(state => state.display)
@@ -16,10 +17,10 @@ export default function AccountMiddleThird() {
         <>
     <div className="middle-third">
     <div className="sidebar">
-        <div className="sidebar-ele ai" onClick={ ()=>{changeDisplayState(<AccountInformation />)}}>Account Information</div>
-        <div className="sidebar-ele cp" onClick={ ()=>{changeDisplayState(<ChangePassword />)}}>Change Password</div>
-        <div className="sidebar-ele as">Account Security</div>
-        <div className="sidebar-ele ce" onClick={ ()=>{changeDisplayState(<ChangeEmail />)}}>Change E-mail</div>
+        <div className="sidebar-ele ai" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: <AccountInformation />})}}>Account Information</div>
+        <div className="sidebar-ele cp" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: <ChangePassword />})}}>Change Password</div>
+        <div className="sidebar-ele as"> Account Security</div>
+        <div className="sidebar-ele ce" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: <ChangeEmail /> })}}>Change E-mail</div>
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">   

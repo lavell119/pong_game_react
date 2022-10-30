@@ -2,12 +2,14 @@ import AccountMiddleThird from "../components/AccountMiddleThird"
 import MiddleThird from "../components/MiddleThird"
 import ChangePassword from "../components/ChangePassword"
 import Tables from "../components/Tables"
+import AccountInformation from "../components/AccountInformation"
+import ChangeEmail from "../components/ChangeEmail"
 
 const initState = {
     display: '',
     middleThirdOptions: <MiddleThird />,
     title: 'Lobby',
-    accountDisplay: 'pppppp'
+    accountDisplay: <AccountInformation />
 }
 
 const rootReducer = (state = initState, action) => {
@@ -33,6 +35,11 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 middleThirdOptions: <AccountMiddleThird />,
                 title: 'Account'
+            }
+        case "LOAD_ACCOUNT_SNIP":
+            return {
+                ...state,
+                accountDisplay: action.payload
             }
         default: 
             return state

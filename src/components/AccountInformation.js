@@ -1,7 +1,7 @@
 export default function AccountInformation() {
     return (
         <>
-    <div className="display-element account-information">
+        <div className="display-element account-information">
                 <div className="personal-info">
                     <h4>Personal Info</h4>
                     <div className="widget">
