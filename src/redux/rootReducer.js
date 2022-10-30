@@ -10,14 +10,29 @@ const initState = {
 
 const rootReducer = (state = initState, action) => {
       
-    if (action.type === "LOAD_TABLES") {
+  /*if (action.type === "LOAD_TABLES") {
         console.log('load tables')
         return {
             ...state,
             display: <Tables />
         }
     }
-    else return state
+    else return state */
+    switch(action.type) {
+        case "LOAD_TABLES":
+            return {
+                ...state,
+                display: <Tables />
+            }
+        case "LOAD_ACCOUNT":
+            return {
+                ...state,
+                middleThirdOptions: <AccountMiddleThird />
+            }
+        default: 
+            return state
+    } 
+    
 }
 
 export default rootReducer

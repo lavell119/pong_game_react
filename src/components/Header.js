@@ -1,4 +1,7 @@
+import { useSelector, useDispatch } from "react-redux"
+
 export default function Header() {
+    const dispatch=useDispatch()
     return (
     <div className="lobby-header">       
         <img className="lobby-logo" src="blackjack-logo.png"></img>
@@ -15,11 +18,9 @@ export default function Header() {
                 <div className="lobby-chip-count">0000</div>
             </div>
             <div className="lobby-buttons">
-                <a href="account">
-                <div class="lobby-btn lobby-account-button">
+                <div class="lobby-btn lobby-account-button" onClick={()=>{dispatch({type: "LOAD_ACCOUNT" })}}>
                     ACCOUNT
                 </div>
-                </a>
                 <div className="lobby-btn lobby-cashier-button">
                     CASHIER
                 </div>
