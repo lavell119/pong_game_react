@@ -15,7 +15,7 @@ function App() {
   <Seperator />
   <DisplayHeader />
   </div>
-  {middleThirdToggle}
+  <MiddleThird />
   <div className="bottom-third">
   </div>
     </>
