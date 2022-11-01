@@ -19,7 +19,6 @@ export default function Cashier() {
                 P2P Exchange
             </div>
             <div className="cashier-header-ele">
-
                 History
             </div>
         </div>
