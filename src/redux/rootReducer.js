@@ -4,6 +4,7 @@ import ChangePassword from "../components/ChangePassword"
 import Tables from "../components/Tables"
 import AccountInformation from "../components/AccountInformation"
 import ChangeEmail from "../components/ChangeEmail"
+import Cashier from "../components/Cashier"
 
 const initState = {
     display: '',
@@ -34,14 +35,21 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 middleThirdOptions: <AccountMiddleThird />,
-                accountDisplay: <AccountInformation />,
+                display: <AccountInformation />,
                 title: 'Account'
             }
         case "LOAD_ACCOUNT_SNIP":
             return {
                 ...state,
-                accountDisplay: action.payload.snippet,
+                display: action.payload.snippet,
                 title: action.payload.title
+            }
+        
+        case "LOAD_CASHIER":
+            return {
+                ...state,
+                display: <Cashier />,
+                title: 'Cashier'
             }
         default: 
             return state

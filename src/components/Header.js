@@ -18,10 +18,10 @@ export default function Header() {
                 <div className="lobby-chip-count">0000</div>
             </div>
             <div className="lobby-buttons">
-                <div class="lobby-btn lobby-account-button" onClick={()=>{dispatch({type: "LOAD_ACCOUNT" })}}>
+                <div class="lobby-btn lobby-account-button" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT" })}}>
                     ACCOUNT
                 </div>
-                <div className="lobby-btn lobby-cashier-button">
+                <div className="lobby-btn lobby-cashier-button" onClick={()=>{dispatch({ type: "LOAD_CASHIER" })}}>
                     CASHIER
                 </div>
             </div>

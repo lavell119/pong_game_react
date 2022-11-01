@@ -11,10 +11,10 @@ export default function Sidebar () {
 
     return (
     <div className="sidebar">
-        <div className="sidebar-ele" onClick={ ()=>{changeDisplayState(<AccountInformation />)}}>Account Information</div>
-        <div className="sidebar-ele" onClick={ ()=>{changeDisplayState(<ChangePassword />)}}>Change Password</div>
-        <div className="sidebar-ele">Account Security</div>
-        <div className="sidebar-ele" onClick={ ()=>{changeDisplayState(<ChangeEmail />)}}>Change E-mail</div>
+        <div className="sidebar-ele" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <AccountInformation />, title: 'Account Information' }})}}>Account Information</div>
+        <div className="sidebar-ele" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangePassword />, title: 'Change Password' }})}}>Change Password</div>
+        <div className="sidebar-ele"> Account Security</div>
+        <div className="sidebar-ele" onClick={()=>{dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangeEmail />, title: 'Change Email' }})}}>Change E-mail</div>
         <div className="sidebar-ele">Change Avatar</div>
     </div>
     )
