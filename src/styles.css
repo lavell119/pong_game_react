@@ -919,3 +919,35 @@ text {
     color: white;
     border: 2px solid black;
 }
+
+.snippet {
+    height: 100%;
+    width: 100%;
+}
+
+.cashier-header {
+    width: 100%;
+    height: 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cashier-header-ele {
+    border-top: 2px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom: 2px solid rgb(221, 221, 221);
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.cashier-header-ele:hover {
+    background: red;
+}
+
+.cashier-header-ele img {
+    padding-right: 5px;
+}

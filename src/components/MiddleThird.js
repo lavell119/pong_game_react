@@ -5,6 +5,7 @@ import ChangeEmail from "./ChangeEmail"
 import Tables from "./Tables"
 import { useSelector, useDispatch } from "react-redux"
 import TableSlider from "./TableSlider.js"
+import Cashier from "./Cashier.js"
 
 export default function MiddleThird() {
     const displayerState=useSelector(state => state.display)
@@ -22,7 +23,7 @@ export default function MiddleThird() {
         <div className="sidebar-ele ca">Change Avatar</div>
     </div>
     <div className="display">   
-        <TableSlider />
+        <Cashier />
     </div>
     </div>
         </>
