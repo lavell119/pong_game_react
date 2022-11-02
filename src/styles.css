@@ -1068,8 +1068,9 @@ th {
     position: relative;
 }
 
-.green {
-    background: rgb(29, 202, 29);
+.green-txt {
+    color: rgb(29, 202, 29);
+    font-weight: bold;
 }
 
 .orange {

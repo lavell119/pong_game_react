@@ -59,7 +59,7 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 cashierContent: action.payload
                 }
-                
+
         default: 
             return state
     } 
