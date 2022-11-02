@@ -1025,3 +1025,106 @@ th {
 .pink {
     background: rgb(202, 29, 86); 
 }
+
+.deposit-snippet {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: center;
+    gap: 80px;
+    padding-bottom: 40px;
+}   
+
+.deposit-col-1 {
+    height: 330px;
+    width: 200px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.large-crypto-logo-box {
+    height: 160px;
+    width: 160px;
+    background: rgb(46, 46, 46);
+    margin: 3px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+
+.large-crypto-logo {
+    height: 135px;
+    width: 135px;
+    border-radius: 100px;   
+}
+
+.deposit-col-2 {
+    width: 450px;
+    height: 340px;
+    color: white;
+    position: relative;
+}
+
+.green {
+    background: rgb(29, 202, 29);
+}
+
+.orange {
+    background: orange;
+}
+
+.crypto-address {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.deposit-btn {
+    height: 40px;
+    width: 200px;
+    background: rgb(43, 42, 42);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.deposit-col-2-row-2 {
+    height: 200px;
+    width: 100px;
+}
+
+.qr {
+    height: 190px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.row-2-area {
+    height: 210px;
+    width: 450px;
+    display: flex;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
