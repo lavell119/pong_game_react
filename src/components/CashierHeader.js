@@ -9,6 +9,7 @@ import CashierOverview from './CashierOverview.js'
 import CashierDeposit from './CashierDeposit.js'
 import CashierWithdrawal from './CashierWithdrawal.js'
 import CashierTransfer from './CashierTransfer'
+import Cashierp2p from './Cashierp2p'
 
 export default function CashierHeader () {
         let dispatch = useDispatch()
@@ -30,11 +31,11 @@ export default function CashierHeader () {
             <img src={transfer} />
                 Transfer
             </div>
-            <div className="cashier-header-ele">
+            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <Cashierp2p /> })}}>
             <img src={p2p} />
                 P2P Exchange
             </div>
-            <div className="cashier-header-ele">
+            <div className="cashier-header-ele" >
             <img src={history} />
                 History
             </div>

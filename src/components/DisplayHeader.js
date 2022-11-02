@@ -7,6 +7,8 @@ export default function DisplayHeader() {
     //import dispatch from redux
     const dispatch = useDispatch()
     const title = useSelector(state => state.title)
+    const sideTitle = useSelector(state => state.sideTitle)
+
 
     return (
         <div className="display-header">
@@ -15,7 +17,7 @@ export default function DisplayHeader() {
             <div className="home-button" onClick={()=>{dispatch({type: "LOAD_TABLES" })}}>
                 Home
             </div>
-            <div className="side-title">Account</div>
+            <div className="side-title">{sideTitle}</div>
         </div>
     </div>
     )

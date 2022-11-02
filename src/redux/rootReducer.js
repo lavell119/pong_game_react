@@ -6,6 +6,7 @@ import AccountInformation from "../components/AccountInformation"
 import ChangeEmail from "../components/ChangeEmail"
 import Cashier from "../components/Cashier"
 import CashierOverview from "../components/CashierOverview"
+import Cashierp2p from "../components/Cashierp2p"
 
 const initState = {
     display: '',
@@ -51,7 +52,8 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 display: <Cashier />,
-                title: 'Cashier'
+                title: 'Cashier',
+                sideTitle: 'Cashier'
             }
 
         case "CHANGE_CASHIER":
