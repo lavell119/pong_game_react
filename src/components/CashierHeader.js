@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import CashierOverview from './CashierOverview.js'
 import CashierDeposit from './CashierDeposit.js'
 import CashierWithdrawal from './CashierWithdrawal.js'
+import CashierTransfer from './CashierTransfer'
 
 export default function CashierHeader () {
         let dispatch = useDispatch()
@@ -25,7 +26,7 @@ export default function CashierHeader () {
             <img src={withdraw} />
                 Withdraw
             </div>
-            <div className="cashier-header-ele">
+            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierTransfer /> })}}>
             <img src={transfer} />
                 Transfer
             </div>

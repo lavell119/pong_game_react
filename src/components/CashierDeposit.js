@@ -1,19 +1,21 @@
 import qrPic from './images/qr_code.jpg'
 import BTC from './images/bitcoin.png'
+import greenBTC from './images/bitcoingreen.png'
+
 
 export default function CashierDeposit () {
     return (
         <div className="deposit-snippet">
             <div className="deposit-col-1">
                 <div className="large-crypto-logo-box">
-                    <div className="large-crypto-logo green"></div>
+                    <img src={greenBTC}></img>
                 </div>
                 <div class="large-crypto-logo-box">
                     <img src={BTC}></img>
                 </div>
             </div>
             <div className="deposit-col-2">
-                <h3>Deposit Bitcoin Cash to this address</h3>
+                <h3>Deposit Bitcoin Cash address</h3>
                 <input class="crypto-address"></input>
                 <div className="row-2-area">
                     <div className="left">

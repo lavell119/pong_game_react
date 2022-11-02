@@ -1129,3 +1129,8 @@ h3 {
     justify-content: flex-end;
     position: relative;
 }
+
+.orange-txt {
+    color: orange;
+    font-weight: bold;
+}
