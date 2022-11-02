@@ -5,12 +5,14 @@ import Tables from "../components/Tables"
 import AccountInformation from "../components/AccountInformation"
 import ChangeEmail from "../components/ChangeEmail"
 import Cashier from "../components/Cashier"
+import CashierOverview from "../components/CashierOverview"
 
 const initState = {
     display: '',
     middleThirdOptions: <MiddleThird />,
     title: 'Lobby',
-    accountDisplay: <AccountInformation />
+    accountDisplay: <AccountInformation />,
+    cashierContent: <CashierOverview />
 }
 
 const rootReducer = (state = initState, action) => {
@@ -51,6 +53,13 @@ const rootReducer = (state = initState, action) => {
                 display: <Cashier />,
                 title: 'Cashier'
             }
+
+        case "CHANGE_CASHIER":
+            return {
+                ...state,
+                cashierContent: action.payload
+                }
+                
         default: 
             return state
     } 
