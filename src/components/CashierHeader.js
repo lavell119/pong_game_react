@@ -11,10 +11,18 @@ import CashierWithdrawal from './CashierWithdrawal.js'
 import CashierTransfer from './CashierTransfer'
 import Cashierp2p from './Cashierp2p'
 
+
+
+        
 export default function CashierHeader () {
-        let addActiveClass = (e) => {
-            e.target.classList.add('active')
-        }
+    let cashierHeaderEle = document.querySelectorAll('.cashier-header-ele')
+
+    cashierHeaderEle.forEach(ele=>{
+        ele.addEventListener('click', function(e) {
+            ele.classList.add('active')
+            console.log('working')
+        })
+    })
 
         let dispatch = useDispatch()
         
