@@ -1094,7 +1094,7 @@ th {
 }
 
 h3 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .deposit-col-2-row-2 {
@@ -1145,13 +1145,59 @@ h3 {
 .p2p-left {
     height: 100%;
     padding-top: 10px;
-    width: 25%;
-    padding-left: 10px;
+    width: 30%;
+    padding-left: 20px;
 }
 
 .p2p-right {
     height: 100%;
     padding-top: 10px;
-    padding-left: 10px;
-    width: 75%;
+    padding-left: 20px;
+    width: 70%;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.p2p-left-row {
+    height: 44px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p2p-left-row-right {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2p-left-row-right input, select {
+    height: 28px;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+.offer-to-input {
+    width: 100%;
+}
+
+.p2p-send-input {
+    width: 55%;
+}
+
+.p2p-send-row {
+    justify-content: space-between;
+}
+
+.p2p-left-row-right select {
+    width: 30%;
+}
+
+.active {
+    background: red;
 }

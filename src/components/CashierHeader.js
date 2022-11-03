@@ -12,7 +12,12 @@ import CashierTransfer from './CashierTransfer'
 import Cashierp2p from './Cashierp2p'
 
 export default function CashierHeader () {
+        let addActiveClass = (e) => {
+            e.target.classList.add('active')
+        }
+
         let dispatch = useDispatch()
+        
         return(
         <div className="cashier-header">
             <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierOverview /> })}}>
