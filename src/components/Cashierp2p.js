@@ -35,6 +35,18 @@ export default function Cashierp2p () {
             </div>
             <div class="p2p-right">
                 <h2>My Offers</h2>
+                <div class="my-offers-header">
+                    <div class="my-offers-header-left">
+                    <select class="offers-filter" placeholder="created">
+                        <option value="created">Created</option>
+                    </select>
+                    </div>
+                    <div class="my-offers-header-right">
+                        <input class="calendar-input"></input>
+                        <p class="cal-divider">-</p>
+                        <input class="calendar-input"></input>                      
+                    </div>
+                </div>
             </div>
         </div>
     )    

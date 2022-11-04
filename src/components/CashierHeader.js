@@ -23,7 +23,10 @@ export default function CashierHeader () {
         let str='background-color'
         return(
         <div className="cashier-header">
-            <div className="cashier-header-ele">
+            <div className={`cashier-header-ele ${activeClass[0]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <CashierOverview /> })
+                dispatch({ type: "CHANGE_CASHIER_OVERVIEW"})
+                }}>
                 <img src={overview} />
                 Overview
             </div>
@@ -41,11 +44,16 @@ export default function CashierHeader () {
             <img src={withdraw} />
                 Withdraw
             </div>
-            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierTransfer /> })}}>
-            <img src={transfer} />
+            <div className={`cashier-header-ele ${activeClass[3]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <CashierTransfer /> })
+                dispatch({ type: "CHANGE_CASHIER_TRANSFER"})
+                }}>
                 Transfer
             </div>
-            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <Cashierp2p /> })}}>
+            <div className={`cashier-header-ele ${activeClass[4]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <Cashierp2p /> })
+                dispatch({ type: "CHANGE_CASHIER_P2P"})
+                }}>
             <img src={p2p} />
                 P2P Exchange
             </div>

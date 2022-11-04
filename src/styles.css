@@ -1149,6 +1149,7 @@ h3 {
     height: 100%;
     padding-top: 10px;
     padding-left: 20px;
+    padding-right: 20px;
     width: 70%;
 }
 
@@ -1195,5 +1196,45 @@ h3 {
 }
 
 .active {
-    background: red;
+    background: rgb(192, 0, 0);
+}
+
+.my-offers-header {
+    height: 44px;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-offers-header-left {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.my-offers-header-right {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.offers-filter {
+    width: 100%;
+}
+
+.calendar-input {
+    height: 28px;
+    width: 110px;
+}
+
+.cal-divider {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    color: white;
 }

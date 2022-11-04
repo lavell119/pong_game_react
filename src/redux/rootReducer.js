@@ -64,17 +64,30 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 cashierContent: action.payload
                 }
+        case "CHANGE_CASHIER_OVERVIEW":
+            return {
+                ...state,
+                cashierHeader: ['active', null, null, null, null, null]
+            }
         case "CHANGE_CASHIER_DEPOSIT":
             return {
                 ...state,
                 cashierHeader: [null, 'active', null, null, null, null]
             }
+        case "CHANGE_CASHIER_TRANSFER":
+            return {
+                ...state,
+                cashierHeader: [null, null, null, 'active', null, null]
+                }
         case "CHANGE_CASHIER_WITHDRAWAL":
             return {
                 ...state,
                 cashierHeader: [null, null, 'active', null, null, null]
             }
-
+        case "CHANGE_CASHIER_P2P":
+            return {
+                ...state,
+                cashierHeader: [null, null, null, null, 'active', null]            }
         default: 
             return state
     } 
