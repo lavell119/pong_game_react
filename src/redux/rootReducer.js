@@ -14,7 +14,9 @@ const initState = {
     title: 'Lobby',
     accountDisplay: <AccountInformation />,
     cashierContent: <CashierOverview />,
-    cashierHeader: [null, null, null, null, null, null]
+    cashierHeader: [null, null, null, null, null, null],
+    sideBarActive: [null, null, null, null, null, null]
+
 }
 
 const rootReducer = (state = initState, action) => {
@@ -90,7 +92,28 @@ const rootReducer = (state = initState, action) => {
         case "CHANGE_CASHIER_P2P":
             return {
                 ...state,
-                cashierHeader: [null, null, null, null, 'active', null]            }
+                cashierHeader: [null, null, null, null, 'active', null] 
+            }
+        case "CHANGE_SIDEBAR_1":
+            return {
+                ...state,
+                sideBarActive: ['activ', null, null, null, null] 
+            }
+        case "CHANGE_SIDEBAR_2":
+            return {
+                ...state,
+                sideBarActive: [null, 'activ', null, null, null] 
+            }
+        case "CHANGE_SIDEBAR_3":
+            return {
+                ...state,
+                sideBarActive: [null, null, 'activ', null] 
+            }
+        case "CHANGE_SIDEBAR_4":
+            return {
+                ...state,
+                sideBarActive: [null, null, null, 'activ'] 
+            }
         default: 
             return state
     } 

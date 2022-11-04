@@ -10,9 +10,8 @@ import CashierDeposit from './CashierDeposit.js'
 import CashierWithdrawal from './CashierWithdrawal.js'
 import CashierTransfer from './CashierTransfer'
 import Cashierp2p from './Cashierp2p'
-import {useState} from 'react'
 import { useSelector } from 'react-redux'
-        
+
 export default function CashierHeader () {
 
         let activeClass=useSelector(state=>state.cashierHeader)
