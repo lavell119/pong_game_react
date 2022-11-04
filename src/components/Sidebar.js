@@ -25,7 +25,7 @@ export default function Sidebar () {
         <div className={`sidebar-ele ${sideBarActive[3]}`} onClick={()=>
             {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangeEmail />, title: 'Change Email' }})
             dispatch({ type: "CHANGE_SIDEBAR_4"})            
-            }}>Change E)-mail</div>
+            }}>Change E-mail</div>
         <div className={`sidebar-ele ${sideBarActive[4]}`}>Change Avatar</div>
     </div>
     )

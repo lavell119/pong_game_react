@@ -63,7 +63,7 @@ const rootReducer = (state = initState, action) => {
                 cashierHeader: ['active', null, null, null, null, null],
                 cashierContent: <CashierOverview />
             }
-
+        //CASHIER
         case "CHANGE_CASHIER":
             return {
                 ...state,
@@ -94,6 +94,7 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 cashierHeader: [null, null, null, null, 'active', null] 
             }
+        //SIDEBAR 
         case "CHANGE_SIDEBAR_1":
             return {
                 ...state,
@@ -114,6 +115,11 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 sideBarActive: [null, null, null, 'activ'] 
             }
+        case "RESET_SIDEBAR_ACTIVE":
+        return {
+            ...state,
+            sideBarActive: [null, null, null, null] 
+        }
         default: 
             return state
     } 
