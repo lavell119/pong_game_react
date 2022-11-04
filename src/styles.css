@@ -1238,3 +1238,16 @@ h3 {
     position: absolute;
     color: white;
 }
+
+.def-btn {
+    padding: 10px;
+    background: rgb(44, 44, 44);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

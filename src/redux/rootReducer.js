@@ -43,6 +43,7 @@ const rootReducer = (state = initState, action) => {
                 display: <AccountInformation />,
                 title: 'Account',
                 sideTitle: 'Account'
+                
             }
         case "LOAD_ACCOUNT_SNIP":
             return {
@@ -56,7 +57,9 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 display: <Cashier />,
                 title: 'Cashier',
-                sideTitle: 'Cashier'
+                sideTitle: 'Cashier',
+                cashierHeader: ['active', null, null, null, null, null],
+                cashierContent: <CashierOverview />
             }
 
         case "CHANGE_CASHIER":

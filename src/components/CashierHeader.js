@@ -48,6 +48,8 @@ export default function CashierHeader () {
                 dispatch({ type: "CHANGE_CASHIER", payload: <CashierTransfer /> })
                 dispatch({ type: "CHANGE_CASHIER_TRANSFER"})
                 }}>
+                <img src={transfer} />
+
                 Transfer
             </div>
             <div className={`cashier-header-ele ${activeClass[4]}`} onClick={()=>{
