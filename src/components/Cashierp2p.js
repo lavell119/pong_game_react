@@ -4,7 +4,6 @@ export default function Cashierp2p () {
             <div class="p2p-left">
                 <h2>Make an Offer</h2>
                 <br />
-
                     <div class="make-an-offer">
                         <div class="p2p-left-row">
                             Offer to 

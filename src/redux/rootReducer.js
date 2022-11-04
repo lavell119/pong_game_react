@@ -13,7 +13,8 @@ const initState = {
     middleThirdOptions: <MiddleThird />,
     title: 'Lobby',
     accountDisplay: <AccountInformation />,
-    cashierContent: <CashierOverview />
+    cashierContent: <CashierOverview />,
+    cashierHeader: [null, null, null, null, null, null]
 }
 
 const rootReducer = (state = initState, action) => {
@@ -63,6 +64,16 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 cashierContent: action.payload
                 }
+        case "CHANGE_CASHIER_DEPOSIT":
+            return {
+                ...state,
+                cashierHeader: [null, 'active', null, null, null, null]
+            }
+        case "CHANGE_CASHIER_WITHDRAWAL":
+            return {
+                ...state,
+                cashierHeader: [null, null, 'active', null, null, null]
+            }
 
         default: 
             return state

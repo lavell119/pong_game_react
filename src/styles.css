@@ -945,10 +945,6 @@ text {
     cursor: pointer;
 }
 
-.cashier-header-ele:hover {
-    background: red;
-}
-
 .cashier-header-ele img {
     padding-right: 5px;
 }

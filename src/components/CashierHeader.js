@@ -10,33 +10,34 @@ import CashierDeposit from './CashierDeposit.js'
 import CashierWithdrawal from './CashierWithdrawal.js'
 import CashierTransfer from './CashierTransfer'
 import Cashierp2p from './Cashierp2p'
-
-
-
+import {useState} from 'react'
+import { useSelector } from 'react-redux'
         
 export default function CashierHeader () {
-    let cashierHeaderEle = document.querySelectorAll('.cashier-header-ele')
 
-    cashierHeaderEle.forEach(ele=>{
-        ele.addEventListener('click', function(e) {
-            ele.classList.add('active')
-            console.log('working')
-        })
-    })
+        let activeClass=useSelector(state=>state.cashierHeader)
+        console.log(activeClass)
 
         let dispatch = useDispatch()
         
+        let str='background-color'
         return(
         <div className="cashier-header">
-            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierOverview /> })}}>
+            <div className="cashier-header-ele">
                 <img src={overview} />
                 Overview
             </div>
-            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierDeposit /> })}}>               
+            <div className={`cashier-header-ele ${activeClass[1]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <CashierDeposit /> })
+                dispatch({ type: "CHANGE_CASHIER_DEPOSIT"})
+                }}>               
                 <img src={deposit} />
                 Deposit
             </div>
-            <div className="cashier-header-ele" onClick={()=>{dispatch({ type: "CHANGE_CASHIER", payload: <CashierWithdrawal /> })}}>
+            <div className={`cashier-header-ele ${activeClass[2]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <CashierWithdrawal /> })
+                dispatch({ type: "CHANGE_CASHIER_WITHDRAWAL"})
+                }}>
             <img src={withdraw} />
                 Withdraw
             </div>
