@@ -664,32 +664,23 @@ a {
     background: rgb(36, 36, 36);
 }
 
-.account-information {
-    width: 100%;
-    height: 100%;
-    padding: 8px 25px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+
 
 .change-email {
     color: white;
 }
 
 .widget {
-    width: 520px;
-    height: 70px;
+    width: 540px;
     margin-top: 8px;
+    padding: 18px 0 18px 0;
     display: flex;
-
     align-items: center;
     border-radius: 11px;
     justify-content: center;
     gap: 32px;
     background: black;
-    border: 1px solid rgb(88, 88, 88);
+    border: 2px solid rgb(56, 56, 56);
     font-size: 14px;
 }
 
@@ -728,6 +719,8 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+
 
 .hide {
     display: none;
@@ -816,6 +809,16 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.account-information {
+    width: 100%;
+    height: 100%;
+    padding: 8px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .table-slider {

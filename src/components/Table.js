@@ -1,5 +1,14 @@
 export default function Table() {
+    /*let ele = document.querySelector('.number-of-players-ele')
+    setInterval(function(){
+        if (ele.innerText!=='Waiting for players...')
+        {ele.innerText += '.'}
+         else {
+            ele.innerText='Waiting for players.'
+        }}  
+    , 1000)*/
     return (
+            
             <div className="display-table">
                 <div className="tble-header">
                     <text>Stakes</text>
@@ -18,7 +27,7 @@ export default function Table() {
                         JOIN TABLE
                     </div>
                     <div className="number-of-players-ele">
-                        Waiting for Players...
+                        Waiting for players...
                     </div>
                 </div>
 

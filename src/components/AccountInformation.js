@@ -4,6 +4,7 @@ export default function AccountInformation() {
         <div className="display-element account-information">
                 <div className="personal-info">
                     <h4>Personal Info</h4>
+                        
                     <div className="widget">
                         <div className="personal-info-text bold">
                             <div className="nick-key">Nick:</div>

@@ -9,7 +9,7 @@ import CashierOverview from "../components/CashierOverview"
 import Cashierp2p from "../components/Cashierp2p"
 
 const initState = {
-    display: '',
+    display: <Tables />,
     middleThirdOptions: <MiddleThird />,
     title: 'Lobby',
     accountDisplay: <AccountInformation />,
