@@ -15,9 +15,21 @@ export default function CashierHistory() {
                 </div>
                 <div className="history-row-1-part-2">
                     <input placeholder="6/10/2022"></input>
+                    <p>-</p>
                     <input placeholder="5/11/2022"></input>
                 </div>
             </div>
+            <table class="cashier-table-history">
+                <tr class="history-table-header">
+                    <th>ID</th>
+                    <th>Date/Time</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            
         </div>
     )
 }
