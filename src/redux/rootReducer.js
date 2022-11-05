@@ -16,8 +16,8 @@ const initState = {
     accountDisplay: <AccountInformation />,
     cashierContent: <CashierOverview />,
     cashierHeader: [null, null, null, null, null, null],
-    sideBarActive: [null, null, null, null, null, null]
-
+    sideBarActive: [null, null, null, null, null],
+    changingSideBar: [null, null, null, null, null]
 }
 
 const rootReducer = (state = initState, action) => {
@@ -47,9 +47,10 @@ const rootReducer = (state = initState, action) => {
                 display: <AccountInformation />,
                 title: 'Account',
                 sideTitle: 'Account',
-                sideBarActive: ['activ', null, null, null, null]               
-
+                sideBarActive: ['activ', null, null, null, null],
+                changingSideBar: ['Account Information', 'Change Password', 'Account Security', 'Change E-mail', 'Change Avatar']      
             }
+
         case "LOAD_ACCOUNT_SNIP":
             return {
                 ...state,
@@ -64,7 +65,9 @@ const rootReducer = (state = initState, action) => {
                 title: 'Cashier',
                 sideTitle: 'Cashier',
                 cashierHeader: ['active', null, null, null, null, null],
-                cashierContent: <CashierOverview />
+                cashierContent: <CashierOverview />,
+                changingSideBar: ['Poker Games', 'Settings', 'Account', 'Cashier', 'About']      
+
             }
         //CASHIER
         case "CHANGE_CASHIER":
@@ -102,7 +105,7 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 cashierHeader: [null, null, null, null, null, 'active'] 
             }
-        //SIDEBAR 
+        //SIDEBAR ACTIVE CLASS
         case "CHANGE_SIDEBAR_1":
             return {
                 ...state,
@@ -127,6 +130,13 @@ const rootReducer = (state = initState, action) => {
         return {
             ...state,
             sideBarActive: [null, null, null, null] 
+        }
+
+        //CHANGING SIDEBAR 
+        case "LOAD_ACCOUNT_SIDEBAR":
+        return {
+            ...state,
+            sideBarActive: ['activ', null, null, null] 
         }
         default: 
             return state

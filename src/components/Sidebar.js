@@ -5,9 +5,11 @@ import {useState} from 'react'
 import { useDispatch } from "react-redux"
 import {useSelector } from "react-redux"
 
+
 export default function Sidebar () {
     let [displayState, changeDisplayState]=useState('initial state')
     let sideBarActive = useSelector(state=>state.sideBarActive)
+    let changingSideBar = useSelector(state=>state.changingSideBar)
     let dispatch = useDispatch()
 
     return (
@@ -15,18 +17,18 @@ export default function Sidebar () {
         <div className={`sidebar-ele ${sideBarActive[0]}`} onClick={()=>
             {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <AccountInformation />, title: 'Account Information' }})
             dispatch({ type: "CHANGE_SIDEBAR_1"})
-            }}>Account Information</div>
+            }}>{changingSideBar[0]}</div>
         <div className={`sidebar-ele ${sideBarActive[1]}`} onClick={()=>
             {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangePassword />, title: 'Change Password' }})
             dispatch({ type: "CHANGE_SIDEBAR_2"})
-            }}>Change Password</div>
+            }}>{changingSideBar[1]}</div>
         <div className={`sidebar-ele ${sideBarActive[2]}`}> 
-        Account Security</div>
+        {changingSideBar[2]}</div>
         <div className={`sidebar-ele ${sideBarActive[3]}`} onClick={()=>
             {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangeEmail />, title: 'Change Email' }})
             dispatch({ type: "CHANGE_SIDEBAR_4"})            
-            }}>Change E-mail</div>
-        <div className={`sidebar-ele ${sideBarActive[4]}`}>Change Avatar</div>
+            }}>{changingSideBar[3]}</div>
+        <div className={`sidebar-ele ${sideBarActive[4]}`}>{changingSideBar[4]}</div>
     </div>
     )
 }
