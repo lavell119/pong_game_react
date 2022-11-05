@@ -1312,3 +1312,15 @@ h3 {
     height: 28px;
     border-radius: 3px;
 }
+
+.cash-history-select-1 {
+    width: 100px;
+}
+
+.cash-history-select-2 {
+    width: 150px;
+}
+
+.history-row-1-part-2 input {
+    padding-left: 5px;
+}
