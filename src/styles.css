@@ -1069,6 +1069,10 @@ th {
     background: orange;
 }
 
+.orange-txt {
+    color: orange;
+}
+
 .crypto-address {
     margin-bottom: 20px;
     width: 100%;
@@ -1257,4 +1261,20 @@ h3 {
     padding-left: 50px;
     padding-right: 50px;
     align-items: flex-start;
+}
+
+.flex-end {
+    align-self: flex-end;
+}
+
+.split {
+    padding-right: 30px;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.bigger-txt {
+    font-size: 18px;
 }

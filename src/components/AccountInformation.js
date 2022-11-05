@@ -21,16 +21,14 @@ export default function AccountInformation() {
                 <div class="ai-row">
                 <div className="personal-info">
                     <h4>Account Status</h4>
-                    <div className="widget between">
-                        <div className="personal-info-text bold">
-                            <div>Rating Info</div>
+                    <div className="widget between flex-start">
+                        <div className="personal-info-text split bold">
+                            <div class="bigger-txt">Rating Info</div>
                             <br />
-                            <div>Ranking</div>
+                            <div>Ranking:</div>
                         </div>
-                        <div className="personal-info-text">
-                            <div></div>
-                            <br />
-                            <div>mlll</div>
+                        <div className="personal-info-text flex-end">
+                            <div class>Beginner</div>
                         </div>
                     </div>
                 </div>
@@ -41,8 +39,8 @@ export default function AccountInformation() {
                             <div>uBCH</div>
                         </div>
                         <div className="personal-info-text">
-                            <div>0</div>
-                            <div>0</div>
+                            <div class="green-txt">0</div>
+                            <div class="orange-txt">0</div>
                         </div>
                     </div>
                     <div className="widget between">
