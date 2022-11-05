@@ -11,6 +11,7 @@ import CashierWithdrawal from './CashierWithdrawal.js'
 import CashierTransfer from './CashierTransfer'
 import Cashierp2p from './Cashierp2p'
 import { useSelector } from 'react-redux'
+import CashierHistory from './CashierHistory'
 
 export default function CashierHeader () {
 
@@ -58,7 +59,10 @@ export default function CashierHeader () {
             <img src={p2p} />
                 P2P Exchange
             </div>
-            <div className="cashier-header-ele" >
+            <div className={`cashier-header-ele ${activeClass[5]}`} onClick={()=>{
+                dispatch({ type: "CHANGE_CASHIER", payload: <CashierHistory /> })
+                dispatch({ type: "CHANGE_CASHIER_HISTORY"})
+                }}>
             <img src={history} />
                 History
             </div>

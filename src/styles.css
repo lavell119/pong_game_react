@@ -1278,3 +1278,37 @@ h3 {
 .bigger-txt {
     font-size: 18px;
 }
+
+.history {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.history-row-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-row-1-part-1 {
+    gap: 10px;
+    width: 30%;
+    display: flex;
+    gap: 15px;
+}
+
+.history-row-1-part-2 {
+    gap: 10px;
+    width: 30%;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.history-row-1 input {
+    height: 28px;
+    border-radius: 3px;
+}

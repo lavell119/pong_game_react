@@ -7,6 +7,7 @@ import ChangeEmail from "../components/ChangeEmail"
 import Cashier from "../components/Cashier"
 import CashierOverview from "../components/CashierOverview"
 import Cashierp2p from "../components/Cashierp2p"
+import CashierHistory from "../components/CashierHistory"
 
 const initState = {
     display: <Tables />,
@@ -95,6 +96,11 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 cashierHeader: [null, null, null, null, 'active', null] 
+            }
+        case "CHANGE_CASHIER_HISTORY":
+            return {
+                ...state,
+                cashierHeader: [null, null, null, null, null, 'active'] 
             }
         //SIDEBAR 
         case "CHANGE_SIDEBAR_1":
