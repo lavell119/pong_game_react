@@ -38,14 +38,16 @@ const rootReducer = (state = initState, action) => {
                 title: 'Lobby',
                 sideTitle: 'Lobby'
             }
+        //ACCOUNT
         case "LOAD_ACCOUNT":
             return {
                 ...state,
                 middleThirdOptions: <AccountMiddleThird />,
                 display: <AccountInformation />,
                 title: 'Account',
-                sideTitle: 'Account'
-                
+                sideTitle: 'Account',
+                sideBarActive: ['activ', null, null, null, null]               
+
             }
         case "LOAD_ACCOUNT_SNIP":
             return {

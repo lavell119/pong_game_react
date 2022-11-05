@@ -20,7 +20,7 @@ export default function Header() {
             <div className="lobby-buttons">
                 <div class="lobby-btn lobby-account-button" onClick={()=>{
                     {dispatch({ type: "LOAD_ACCOUNT" })}
-                    {dispatch({ type: "RESET_SIDEBAR_ACTIVE" })}
+                    {dispatch({ type: "CHANGE_ACCOUNT_1" })}
                     }}>   
                     ACCOUNT
                 </div>
