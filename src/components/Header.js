@@ -14,8 +14,18 @@ export default function Header() {
                 </div>  
                 </div> 
             <div className="lobby-chip-snippet">
-                <div className="lobby-chip-symbol"></div>
-                <div className="lobby-chip-count">0000</div>
+                <div class="chip-snippet">
+                    <div className="lobby-chip-symbol"></div>
+                    <div className="lobby-chip-count">0</div>
+                </div>
+                <div class="chip-snippet">
+                    <div className="lobby-chip-symbol"></div>
+                    <div className="lobby-chip-count">0</div>
+                </div>
+                <div class="chip-snippet">
+                    <div className="lobby-chip-symbol"></div>
+                    <div className="lobby-chip-count">0</div>
+                </div>
             </div>
             <div className="lobby-buttons">
                 <div class="lobby-btn lobby-account-button" onClick={()=>{

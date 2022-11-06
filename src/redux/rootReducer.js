@@ -37,7 +37,9 @@ const rootReducer = (state = initState, action) => {
                 middleThirdOptions: <MiddleThird />,
                 display: <Tables />,
                 title: 'Lobby',
-                sideTitle: 'Lobby'
+                sideTitle: 'Lobby',
+                changingSideBar: ['...', '', '', '', '', '']      
+
             }
         //ACCOUNT
         case "LOAD_ACCOUNT":
