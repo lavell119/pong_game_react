@@ -457,8 +457,8 @@ body {
 }
 
 .lobby-chip-symbol {
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
     margin-right: 10px;
     border-radius: 30px;
     background: rgb(73, 73, 73);
@@ -485,7 +485,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .lobby-user-name {
@@ -677,6 +677,8 @@ a {
 
 .change-email {
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .widget {
@@ -787,7 +789,7 @@ a {
     align-items: center;
     font-size: 21px;
     position: relative;
-    bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .display-element {
@@ -809,7 +811,6 @@ a {
 
 .table-container {
     display: flex;
-    background: purple;
 }
 
 .display-table {
@@ -1164,6 +1165,7 @@ h3 {
 
 .title {
     font-weight: bold;
+    position: relative;
 }
 
 .p2p-left-row {
@@ -1280,6 +1282,13 @@ h3 {
     padding-right: 30px;
 }
 
+.change-email {
+    color: white;
+    position: relative;
+    bottom: 70px;
+}
+
+
 .flex-start {
     justify-content: flex-start;
 }
@@ -1358,4 +1367,14 @@ h3 {
 
 .history-table-header {
     background: rgb(59, 59, 59);
+}
+
+.default-btn {
+    height: 40px;
+    width: 110px;
+    background: rgb(48, 48, 48);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
 }

@@ -5,7 +5,9 @@ export default function ChangeEmail() {
             <div className="change-email-row">
                 <label>New E-mail:</label>
                 <input className="change-email-input"></input>
-            </div>       
+                
+            </div>    
+            <button className="default-btn">Save</button>   
         </div>
     )
 }

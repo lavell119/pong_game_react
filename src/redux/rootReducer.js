@@ -38,7 +38,7 @@ const rootReducer = (state = initState, action) => {
                 display: <Tables />,
                 title: 'Lobby',
                 sideTitle: 'Lobby',
-                changingSideBar: ['...', '', '', '', '', '']      
+                changingSideBar: ['', '', '', '', '', '']      
 
             }
         //ACCOUNT
