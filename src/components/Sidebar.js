@@ -5,6 +5,7 @@ import {useState} from 'react'
 import { useDispatch } from "react-redux"
 import {useSelector } from "react-redux"
 import AccountSecurity from "./AccountSecurity"
+import Avatar from "./AccountAvatar"
 
 
 export default function Sidebar () {
@@ -32,7 +33,10 @@ export default function Sidebar () {
             {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangeEmail />, title: 'Change Email' }})
             dispatch({ type: "CHANGE_SIDEBAR_4"})            
             }}>{changingSideBar[3]}</div>
-        <div className={`sidebar-ele ${sideBarActive[4]}`}>{changingSideBar[4]}</div>
+        <div className={`sidebar-ele ${sideBarActive[4]}`} onClick={()=>
+            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <Avatar />, title: 'Change Avatar' }})
+            dispatch({ type: "CHANGE_SIDEBAR_5"})            
+            }}>{changingSideBar[4]}</div>
     </div>
     )
 }

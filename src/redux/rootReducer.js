@@ -8,6 +8,7 @@ import Cashier from "../components/Cashier"
 import CashierOverview from "../components/CashierOverview"
 import Cashierp2p from "../components/Cashierp2p"
 import CashierHistory from "../components/CashierHistory"
+import Avatar from "../components/AccountAvatar"
 
 const initState = {
     display: <Tables />,
@@ -121,17 +122,22 @@ const rootReducer = (state = initState, action) => {
         case "CHANGE_SIDEBAR_3":
             return {
                 ...state,
-                sideBarActive: [null, null, 'activ', null] 
+                sideBarActive: [null, null, 'activ', null, null] 
             }
         case "CHANGE_SIDEBAR_4":
             return {
                 ...state,
-                sideBarActive: [null, null, null, 'activ'] 
+                sideBarActive: [null, null, null, 'activ', null] 
+            }
+        case "CHANGE_SIDEBAR_5":
+            return {
+                ...state,
+                sideBarActive: [null, null, null, null, 'activ'] 
             }
         case "RESET_SIDEBAR_ACTIVE":
         return {
             ...state,
-            sideBarActive: [null, null, null, null] 
+            sideBarActive: [null, null, null, null, null] 
         }
 
         //CHANGING SIDEBAR 

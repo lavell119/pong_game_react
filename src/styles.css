@@ -1463,3 +1463,54 @@ h3 {
 .radio {
     margin-right: 5px;
 }
+
+.avatar-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-sec1 {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-sec2 {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-current {
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 80px;
+}
+
+.avatar-grid {
+    display: grid;
+    height: 85%;
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.avatar-option {
+    width: 65px;
+    height: 65px;
+    background: rgb(90, 90, 90);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.avatar-option:hover {
+    border: 1px solid rgb(192, 192, 192);
+}
