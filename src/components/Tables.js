@@ -7,6 +7,7 @@ export default function Tables() {
             <Table />
             <Table />
             <Table />
+            <Table />
         </>
     )
     

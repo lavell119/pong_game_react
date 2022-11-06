@@ -3,7 +3,6 @@ import Header from './Header.js'
 import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
 import MiddleThird from './MiddleThird.js'
-import AccountMiddleThird from './AccountMiddleThird.js'
 import { useSelector } from 'react-redux'
 
 function App() {
