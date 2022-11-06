@@ -12,13 +12,15 @@ export default function DisplayHeader() {
 
     return (
         <div className="display-header">
-        <div className="title">{title}</div>
-        <div className="tables-header-strip-left">
-            <div className="home-button" onClick={()=>{dispatch({type: "LOAD_TABLES" })}}>
-                Home
+            <div className="disp-left">
+                <div className="home-button" onClick={()=>{dispatch({type: "LOAD_TABLES" })}}>
+                    Home
+                </div>
+                <div className="side-title">{sideTitle}</div>             
             </div>
-            <div className="side-title">{sideTitle}</div>
+            <div className="disp-right">
+                <div className="title">{title}</div>
+            </div>
         </div>
-    </div>
     )
 }
