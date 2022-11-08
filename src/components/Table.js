@@ -7,11 +7,10 @@ export default function Table() {
             ele.innerText='Waiting for players.'
         }}  
     , 1000)*/
-    return (
-            
-            <div className="display-table">
+    return (            
+            <div className="display-table" >
                 <div className="tble-header">
-                    <text>Stakes</text>
+                    <text style={{color: "purple"}}>Stakes</text>
                     <text className="stakes">$1 / $2</text>
                 </div>
                 <div className="tble">
