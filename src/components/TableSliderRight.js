@@ -7,6 +7,7 @@ export default function TableSliderRight() {
     }
     return(
         <div className="table-slider-right" onClick={()=>{dispatch({ type: "SLIDE-TABLES-RIGHT" })}}>
+            &#x203A;
         </div>
     )
 }

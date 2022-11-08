@@ -7,6 +7,7 @@ export default function TableSliderLeft() {
     }
     return(
         <div className="table-slider-left" onClick={()=>{dispatch({ type: "SLIDE-TABLES-LEFT" })}}>
+            &#x2039;
         </div>
     )
 }
