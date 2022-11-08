@@ -10,12 +10,10 @@ export default function Table() {
         }}  
     , 1000)*/
 
-    const [colorr, changeColor] = useState("red")
-
     return (            
             <div className="display-table" >
                 <div className="tble-header">
-                    <div style={{color: {colorr}}}>Stakes</div>
+                    <div>Stakes</div>
                     <text className="stakes">$1 / $2</text>
                 </div>
                 <div className="tble">

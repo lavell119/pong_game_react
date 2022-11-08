@@ -152,7 +152,12 @@ const rootReducer = (state = initState, action) => {
         case "SLIDE-TABLES-RIGHT":
         return {
             ...state,
-            slidePosition: 100
+            slidePosition: state.slidePosition-300
+        }   
+        case "SLIDE-TABLES-LEFT":
+        return {
+            ...state,
+            slidePosition: state.slidePosition+300
         }   
         default: 
             return state
