@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 export default function Table() {
     /*let ele = document.querySelector('.number-of-players-ele')
     setInterval(function(){
@@ -7,10 +9,13 @@ export default function Table() {
             ele.innerText='Waiting for players.'
         }}  
     , 1000)*/
+
+    const [colorr, changeColor] = useState("red")
+
     return (            
             <div className="display-table" >
                 <div className="tble-header">
-                    <text style={{color: "purple"}}>Stakes</text>
+                    <div style={{color: {colorr}}}>Stakes</div>
                     <text className="stakes">$1 / $2</text>
                 </div>
                 <div className="tble">

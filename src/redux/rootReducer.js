@@ -18,7 +18,8 @@ const initState = {
     cashierContent: <CashierOverview />,
     cashierHeader: [null, null, null, null, null, null],
     sideBarActive: [null, null, null, null, null],
-    changingSideBar: [null, null, null, null, null]
+    changingSideBar: [null, null, null, null, null],
+    slidePosition: 0
 }
 
 const rootReducer = (state = initState, action) => {
@@ -146,6 +147,13 @@ const rootReducer = (state = initState, action) => {
             ...state,
             sideBarActive: ['activ', null, null, null] 
         }
+
+        //TABLE SLIDER
+        case "SLIDE-TABLES-RIGHT":
+        return {
+            ...state,
+            slidePosition: 100
+        }   
         default: 
             return state
     } 
