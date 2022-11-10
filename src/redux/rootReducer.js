@@ -26,8 +26,8 @@ let accountSidebar=
 let homeSideBar= 
 [ 
 {title: 'Blackjack Games', display: <Tables />}, 
-{title: 'Settings', display: ''}, 
-{title: 'Account', display: ''}, 
+{title: 'Settings', display: '', sidebar: "LOAD_SETTING_SIDEBAR"}, 
+{title: 'Account', display: '', sidebar: "LOAD_ACCOUNT_SIDEBAR"} , 
 {title: 'Cashier', display: <Cashier />}, 
 {title: 'About', display: ''} 
 ] 
@@ -52,7 +52,7 @@ const initState = {
     cashierHeader: [null, null, null, null, null, null],
     sideBarActive: [null, null, null, null, null],
     slidePosition: 0, 
-    changingSideBar: homeSideBar
+    changingSideBar: settingsSideBar
 }
 
 
@@ -173,8 +173,15 @@ const rootReducer = (state = initState, action) => {
         case "LOAD_ACCOUNT_SIDEBAR":
         return {
             ...state,
-            sideBarActive: ['activ', null, null, null] 
+            changingSideBar: accountSidebar
         }
+
+        case "LOAD_SETTING_SIDEBAR":
+        return {
+            ...state,
+            changingSideBar: settingsSideBar
+        }
+
 
         //TABLE SLIDER
         case "SLIDE-TABLES-RIGHT":
