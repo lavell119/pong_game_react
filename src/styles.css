@@ -916,6 +916,7 @@ text {
 .stakes {
     font-size: 19px;
     font-weight: bold;
+    color: white;
 }
 
 .join-btn {

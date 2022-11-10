@@ -9,6 +9,39 @@ import CashierOverview from "../components/CashierOverview"
 import Cashierp2p from "../components/Cashierp2p"
 import CashierHistory from "../components/CashierHistory"
 import Avatar from "../components/AccountAvatar"
+import AccountSecurity from "../components/AccountSecurity"
+
+
+/////--SIDEBARS
+
+let accountSidebar=
+[
+{title: 'Account Information', display: <AccountInformation /> },                                
+{title: 'Change Password', display: <ChangePassword /> },
+{title: 'Account Security', display: <AccountSecurity /> },
+{title: 'Change E-mail', display: <ChangeEmail /> }, 
+{title: 'Change Avatar', display: <Avatar /> }
+] 
+
+let homeSideBar= 
+[ 
+{title: 'Blackjack Games', display: <Tables />}, 
+{title: 'Settings', display: ''}, 
+{title: 'Account', display: ''}, 
+{title: 'Cashier', display: <Cashier />}, 
+{title: 'About', display: ''} 
+] 
+
+let settingsSideBar= 
+[ 
+{title: 'Chat Settings', display: ''}, 
+{title: 'Sound Settings', display: ''}, 
+{title: 'Language', display: ''}, 
+{title: 'Cashier', display: <Cashier />}, 
+{title: 'Table Skins', display: ''} 
+] 
+
+/////--INITSTATE
 
 const initState = {
     display: <Tables />,
@@ -18,20 +51,15 @@ const initState = {
     cashierContent: <CashierOverview />,
     cashierHeader: [null, null, null, null, null, null],
     sideBarActive: [null, null, null, null, null],
-    changingSideBar: [null, null, null, null, null],
-    slidePosition: 0
+    slidePosition: 0, 
+    changingSideBar: homeSideBar
 }
 
+
+/////--ROOTREDUCER
+
 const rootReducer = (state = initState, action) => {
-      
-  /*if (action.type === "LOAD_TABLES") {
-        console.log('load tables')
-        return {
-            ...state,
-            display: <Tables />
-        }
-    }
-    else return state */
+
     switch(action.type) {
         case "LOAD_TABLES":
             return {
@@ -40,8 +68,8 @@ const rootReducer = (state = initState, action) => {
                 display: <Tables />,
                 title: 'Lobby',
                 sideTitle: 'Lobby',
-                changingSideBar: ['', '', '', '', '', '']      
-
+                changingSideBar: homeSideBar
+                
             }
         //ACCOUNT
         case "LOAD_ACCOUNT":
@@ -52,7 +80,7 @@ const rootReducer = (state = initState, action) => {
                 title: 'Account',
                 sideTitle: 'Account',
                 sideBarActive: ['activ', null, null, null, null],
-                changingSideBar: ['Account Information', 'Change Password', 'Account Security', 'Change E-mail', 'Change Avatar']      
+                changingSideBar: accountSidebar
             }
 
         case "LOAD_ACCOUNT_SNIP":
@@ -70,7 +98,7 @@ const rootReducer = (state = initState, action) => {
                 sideTitle: 'Cashier',
                 cashierHeader: ['active', null, null, null, null, null],
                 cashierContent: <CashierOverview />,
-                changingSideBar: ['Poker Games', 'Settings', 'Account', 'Cashier', 'About']      
+                changingSideBar: homeSideBar   
 
             }
         //CASHIER
@@ -150,6 +178,7 @@ const rootReducer = (state = initState, action) => {
 
         //TABLE SLIDER
         case "SLIDE-TABLES-RIGHT":
+            if(state.statePosition!==0)
         return {
             ...state,
             slidePosition: state.slidePosition-300
@@ -158,6 +187,12 @@ const rootReducer = (state = initState, action) => {
         return {
             ...state,
             slidePosition: state.slidePosition+300
+        }   
+        case "render-sidebar-ele":
+        return {
+            ...state,
+                display: action.payload.display,
+                title: action.payload.title           
         }   
         default: 
             return state

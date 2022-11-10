@@ -1,15 +1,7 @@
-import AccountInformation from "./AccountInformation"
-import ChangePassword from "./ChangePassword"
-import ChangeEmail from "./ChangeEmail"
-import {useState} from 'react'
 import { useDispatch } from "react-redux"
 import {useSelector } from "react-redux"
-import AccountSecurity from "./AccountSecurity"
-import Avatar from "./AccountAvatar"
-
 
 export default function Sidebar () {
-    let [displayState, changeDisplayState]=useState('initial state')
     let sideBarActive = useSelector(state=>state.sideBarActive)
     let changingSideBar = useSelector(state=>state.changingSideBar)
     let dispatch = useDispatch()
@@ -17,26 +9,35 @@ export default function Sidebar () {
     return (
     <div className="sidebar">
         <div className={`sidebar-ele ${sideBarActive[0]}`} onClick={()=>
-            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <AccountInformation />, title: 'Account Information' }})
+            {dispatch({ type: "render-sidebar-ele", payload: { display: changingSideBar[0].display, title: changingSideBar[0].title }})
             dispatch({ type: "CHANGE_SIDEBAR_1"})
-            }}>{changingSideBar[0]}</div>
+
+            }}>{ changingSideBar[0].title }
+        </div>
+
         <div className={`sidebar-ele ${sideBarActive[1]}`} onClick={()=>
-            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangePassword />, title: 'Change Password' }})
+            {dispatch({ type: "render-sidebar-ele", payload: { display: changingSideBar[1].display, title: changingSideBar[1].title }})
             dispatch({ type: "CHANGE_SIDEBAR_2"})
-            }}>{changingSideBar[1]}</div>
+            }}>{ changingSideBar[1].title }
+        </div>
+
         <div className={`sidebar-ele ${sideBarActive[2]}`} onClick={()=>
-            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <AccountSecurity />, title: 'Account Security' }})
+            {dispatch({ type: "render-sidebar-ele", payload: { display: changingSideBar[2].display, title: changingSideBar[2].title }})
             dispatch({ type: "CHANGE_SIDEBAR_3"})
-            }}> 
-        {changingSideBar[2]}</div>
+            }}>{ changingSideBar[2].title }
+        </div>
+
         <div className={`sidebar-ele ${sideBarActive[3]}`} onClick={()=>
-            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <ChangeEmail />, title: 'Change Email' }})
-            dispatch({ type: "CHANGE_SIDEBAR_4"})            
-            }}>{changingSideBar[3]}</div>
+            {dispatch({ type: "render-sidebar-ele", payload: { display: changingSideBar[3].display, title: changingSideBar[3].title }})
+            dispatch({ type: "CHANGE_SIDEBAR_4"})
+            }}>{ changingSideBar[3].title }
+        </div>
+
         <div className={`sidebar-ele ${sideBarActive[4]}`} onClick={()=>
-            {dispatch({ type: "LOAD_ACCOUNT_SNIP", payload: { snippet: <Avatar />, title: 'Change Avatar' }})
-            dispatch({ type: "CHANGE_SIDEBAR_5"})            
-            }}>{changingSideBar[4]}</div>
+            {dispatch({ type: "render-sidebar-ele", payload: { display: changingSideBar[4].display, title: changingSideBar[4].title }})
+            dispatch({ type: "CHANGE_SIDEBAR_5"})
+            }}>{ changingSideBar[4].title }
+        </div>  
     </div>
     )
 }

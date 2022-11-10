@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux"
 
-
 export default function TableSliderRight() {
     let dispatch = useDispatch()
     let slideLeft = () => {       
