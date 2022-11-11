@@ -22,7 +22,6 @@ let accountSidebar=
 {title: 'Change E-mail', display: <ChangeEmail /> }, 
 {title: 'Change Avatar', display: <Avatar /> }
 ] 
-
 let homeSideBar= 
 [ 
 {title: 'Blackjack Games', display: <Tables />}, 
@@ -31,7 +30,6 @@ let homeSideBar=
 {title: 'Cashier', display: <Cashier />}, 
 {title: 'About', display: ''} 
 ] 
-
 let settingsSideBar= 
 [ 
 {title: 'Chat Settings', display: ''}, 
