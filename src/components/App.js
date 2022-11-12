@@ -4,6 +4,7 @@ import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
 import MiddleThird from './MiddleThird.js'
 import { useSelector } from 'react-redux'
+import FooterWidget from './FooterWidget.js'
 
 function App() {
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
@@ -16,6 +17,7 @@ function App() {
   </div>
   <MiddleThird />
   <div className="bottom-third">
+    <FooterWidget />
   </div>
     </>
 )

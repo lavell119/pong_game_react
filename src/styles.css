@@ -1675,3 +1675,28 @@ input {
     justify-content: center;
     cursor: pointer;
 }
+
+.footer-widget {
+    height: 88%;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ftr-widget {
+    width: 32%;
+    height: 80%;
+    border-radius: 5px;
+    background: rgb(70, 70, 70);
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-third {
+    display: flex;
+    justify-content: flex-end;
+}
