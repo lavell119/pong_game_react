@@ -10,6 +10,8 @@ import Cashierp2p from "../components/Cashierp2p"
 import CashierHistory from "../components/CashierHistory"
 import Avatar from "../components/AccountAvatar"
 import AccountSecurity from "../components/AccountSecurity"
+import ChatSettings from "../components/ChatSettings"
+import SoundSettings from "../components/SoundSettings"
 
 
 /////--SIDEBARS
@@ -26,14 +28,14 @@ let homeSideBar=
 [ 
 {title: 'Blackjack Games', display: <Tables />}, 
 {title: 'Settings', display: '', sidebar: "LOAD_SETTING_SIDEBAR"}, 
-{title: 'Account', display: '', sidebar: "LOAD_ACCOUNT_SIDEBAR"} , 
+{title: 'Account', display: '', sidebar: "LOAD_ACCOUNT"} , 
 {title: 'Cashier', display: <Cashier />}, 
 {title: 'About', display: ''} 
 ] 
 let settingsSideBar= 
 [ 
-{title: 'Chat Settings', display: ''}, 
-{title: 'Sound Settings', display: ''}, 
+{title: 'Chat Settings', display: <ChatSettings />}, 
+{title: 'Sound Settings', display: <SoundSettings />}, 
 {title: 'Language', display: ''}, 
 {title: 'Cashier', display: <Cashier />}, 
 {title: 'Table Skins', display: ''} 
@@ -66,7 +68,9 @@ const rootReducer = (state = initState, action) => {
                 display: <Tables />,
                 title: 'Lobby',
                 sideTitle: 'Lobby',
-                changingSideBar: homeSideBar
+                changingSideBar: homeSideBar,
+                sideBarActive: [null, null, null, null, null],
+
                 
             }
         //ACCOUNT
@@ -177,18 +181,24 @@ const rootReducer = (state = initState, action) => {
         case "LOAD_SETTING_SIDEBAR":
         return {
             ...state,
-            changingSideBar: settingsSideBar
+            changingSideBar: settingsSideBar,
+            title: 'Chat Settings',
+            sideTitle: 'Settings',
+            sideBarActive: ['activ', null, null, null, null],
+            display: <ChatSettings />
+
         }
 
 
         //TABLE SLIDER
         case "SLIDE-TABLES-RIGHT":
-            if(state.statePosition!==0)
+            if(state.slidePosition> -1100)
         return {
             ...state,
             slidePosition: state.slidePosition-300
-        }   
+        } 
         case "SLIDE-TABLES-LEFT":
+            if(state.slidePosition<-1)
         return {
             ...state,
             slidePosition: state.slidePosition+300

@@ -8,6 +8,7 @@ export default function DisplayHeader() {
     const dispatch = useDispatch()
     const title = useSelector(state => state.title)
     const sideTitle = useSelector(state => state.sideTitle)
+    let sliderPosition = useSelector(state => state.slidePosition)
 
 
     return (

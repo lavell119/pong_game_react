@@ -11,7 +11,7 @@ export default function MiddleThird() {
     <div className="middle-third">
         <Sidebar />
         <div className="display">   
-            <ChatSettings />
+            {displayerState}
         </div>
     </div>
         </>
