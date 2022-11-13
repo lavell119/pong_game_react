@@ -1698,9 +1698,17 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .bottom-third {
     display: flex;
     justify-content: flex-end;
+}
+
+.ftr-widget img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
