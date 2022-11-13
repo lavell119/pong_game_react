@@ -1,4 +1,16 @@
+import { useSelector } from "react-redux"
+
 export default function AccountInformation() {
+
+    
+    const username=useSelector(state => state.currentUser.username)
+    const rank=useSelector(state => state.currentUser.rank)
+    const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
+    const ubch=useSelector(state => state.currentUser.UBCHchipCount)
+    const krill=useSelector(state => state.currentUser.krill)
+    const email=useSelector(state => state.currentUser.email)
+
+
     return (
         <>
         <div className="display-element account-information">
@@ -12,8 +24,8 @@ export default function AccountInformation() {
                             <div className="email-key">Email:</div>
                         </div>
                         <div className="personal-info-text">
-                            <div className="nick-key">Username</div>
-                            <div className="email-key">superman@gmail.com</div>
+                            <div className="nick-key">{ username }</div>
+                            <div className="email-key">{ email }</div>
                         </div>
                     </div>
                 </div>
@@ -28,7 +40,7 @@ export default function AccountInformation() {
                             <div>Ranking:</div>
                         </div>
                         <div className="personal-info-text flex-end">
-                            <div class>Beginner</div>
+                            <div class>{ rank }</div>
                         </div>
                     </div>
                 </div>
@@ -39,8 +51,8 @@ export default function AccountInformation() {
                             <div>uBCH</div>
                         </div>
                         <div className="personal-info-text">
-                            <div class="green-txt">0</div>
-                            <div class="orange-txt">0</div>
+                            <div class="green-txt">{ ubtc }</div>
+                            <div class="orange-txt">{ ubch }</div>
                         </div>
                     </div>
                     <div className="widget between">
@@ -48,7 +60,7 @@ export default function AccountInformation() {
                             <div>Krill</div>
                         </div>
                         <div className="personal-info-text">
-                            <div>3219</div>
+                            <div>{ krill }</div>
                         </div>
                     </div>
                 </div>

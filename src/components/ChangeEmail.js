@@ -1,4 +1,7 @@
 export default function ChangeEmail() {
+    
+    
+
     return (
         
         <div className="display-element change-email">

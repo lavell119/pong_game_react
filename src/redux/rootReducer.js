@@ -14,6 +14,18 @@ import ChatSettings from "../components/ChatSettings"
 import SoundSettings from "../components/SoundSettings"
 
 
+
+let user = {
+    username: "afrosamurai",
+    password: "password",
+    UBTCchipCount: 83991,
+    UBCHchipCount: 127,
+    rank: "Beginner",
+    email: "afrosamurai119@gmail.com",
+    krill: 7388
+}
+
+
 /////--SIDEBARS
 
 let accountSidebar=
@@ -52,7 +64,8 @@ const initState = {
     cashierHeader: [null, null, null, null, null, null],
     sideBarActive: [null, null, null, null, null],
     slidePosition: 0, 
-    changingSideBar: settingsSideBar
+    changingSideBar: settingsSideBar,
+    currentUser: user
 }
 
 
@@ -192,7 +205,6 @@ const rootReducer = (state = initState, action) => {
 
         //TABLE SLIDER
         case "SLIDE-TABLES-RIGHT":
-            if(state.slidePosition> -1100)
         return {
             ...state,
             slidePosition: state.slidePosition-300
