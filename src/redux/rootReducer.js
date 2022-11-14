@@ -38,7 +38,7 @@ let accountSidebar=
 ] 
 let homeSideBar= 
 [ 
-{title: 'Blackjack Games', display: <Tables />}, 
+{title: 'Lobby', display: <Tables />}, 
 {title: 'Settings', display: '', sidebar: "LOAD_SETTING_SIDEBAR"}, 
 {title: 'Account', display: '', sidebar: "LOAD_ACCOUNT"} , 
 {title: 'Cashier', display: <Cashier />}, 
@@ -62,9 +62,9 @@ const initState = {
     accountDisplay: <AccountInformation />,
     cashierContent: <CashierOverview />,
     cashierHeader: [null, null, null, null, null, null],
-    sideBarActive: [null, null, null, null, null],
+    sideBarActive: ['activ', null, null, null, null],
     slidePosition: 0, 
-    changingSideBar: settingsSideBar,
+    changingSideBar: homeSideBar,
     currentUser: user
 }
 
@@ -82,7 +82,7 @@ const rootReducer = (state = initState, action) => {
                 title: 'Lobby',
                 sideTitle: 'Lobby',
                 changingSideBar: homeSideBar,
-                sideBarActive: [null, null, null, null, null],
+                sideBarActive: ['activ', null, null, null, null],
 
                 
             }
