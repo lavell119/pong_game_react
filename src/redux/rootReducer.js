@@ -68,7 +68,7 @@ const initState = {
     slidePosition: 0, 
     changingSideBar: homeSideBar,
     currentUser: user,
-    chatState: null
+    chatState: ''
 }
 
 
@@ -226,11 +226,18 @@ const rootReducer = (state = initState, action) => {
         }  
 
         //TOGGLE-CHAT
-        case "toggle-chat-popup":
+        case "open-chat-popup":
         return {
             ...state,
             chatState: 'open-chat'
         }
+
+        case "toggle-chat":
+        return {
+            ...state,
+            openChat: current=>!current 
+
+            }
 
         default: 
             return state

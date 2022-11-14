@@ -12,7 +12,7 @@ export default function ChatPopup() {
         setIsActive(current => !current)
     }
     return (
-        <div className={`chat-popup ${chatState}`}>        
+        <div className={`chat-popup ${chatState}`} >        
         </div>
     )
 }
