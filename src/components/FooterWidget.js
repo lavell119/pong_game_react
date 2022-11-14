@@ -14,8 +14,10 @@ export default function FooterWidget () {
             <div className="ftr-widget" onClick={()=>
             { 
                 if(chatPopupState===''){
-                dispatch({ type: "open-chat-popup" }) }
-                
+                dispatch({ type: "open-chat-popup" }) }  
+                else {
+                    dispatch({ type: "close-chat-popup" })  
+                }             
             }
                 }><img src={chat}></img>0</div>
             <div className="ftr-widget"><img src={trophy}></img>0</div>

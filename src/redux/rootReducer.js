@@ -232,6 +232,13 @@ const rootReducer = (state = initState, action) => {
             chatState: 'open-chat'
         }
 
+        case "close-chat-popup":
+        return {
+            ...state,
+            chatState: ''
+        }
+        
+
         case "toggle-chat":
         return {
             ...state,
