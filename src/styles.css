@@ -1712,3 +1712,12 @@ input {
     justify-content: center;
 
 }
+
+.online-players-div {
+    height: 90%;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+}

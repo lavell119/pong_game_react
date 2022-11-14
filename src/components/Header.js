@@ -14,6 +14,17 @@ export default function Header() {
     return (
     <div className="lobby-header">       
         <img className="lobby-logo" src="blackjack-logo.png"></img>
+        <div className="online-players-div">
+            <div className="online-players-row">
+                <span class="orange-txt">207</span> players
+            </div>
+            <div className="online-players-row">
+                <span class="orange-txt">160</span> online
+            </div>
+            <div className="online-players-row">
+                <span class="orange-txt">3</span> tournaments
+            </div>
+        </div>
         <div className="header-right">
             <div className="user-snippet">
                 <div className="user-image"></div>
