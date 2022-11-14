@@ -25,7 +25,9 @@ export default function Table() {
                     </div>
                 </div>
                 <div className="tble-footer">
-                    <div className="join-btn">
+                    <div className="join-btn" onClick={()=>{
+                        window.open("http://www.google.com")
+                    }}>
                         JOIN TABLE
                     </div>
                     <div className="number-of-players-ele">

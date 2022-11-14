@@ -36,6 +36,7 @@ let accountSidebar=
 {title: 'Change E-mail', display: <ChangeEmail /> }, 
 {title: 'Change Avatar', display: <Avatar /> }
 ] 
+
 let homeSideBar= 
 [ 
 {title: 'Lobby', display: <Tables />}, 
@@ -44,6 +45,7 @@ let homeSideBar=
 {title: 'Cashier', display: <Cashier />}, 
 {title: 'About', display: ''} 
 ] 
+
 let settingsSideBar= 
 [ 
 {title: 'Chat Settings', display: <ChatSettings />}, 
@@ -65,7 +67,8 @@ const initState = {
     sideBarActive: ['activ', null, null, null, null],
     slidePosition: 0, 
     changingSideBar: homeSideBar,
-    currentUser: user
+    currentUser: user,
+    chatState: null
 }
 
 
@@ -220,7 +223,15 @@ const rootReducer = (state = initState, action) => {
             ...state,
                 display: action.payload.display,
                 title: action.payload.title           
-        }   
+        }  
+
+        //TOGGLE-CHAT
+        case "toggle-chat-popup":
+        return {
+            ...state,
+            chatState: 'open-chat'
+        }
+
         default: 
             return state
     } 

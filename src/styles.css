@@ -1721,3 +1721,20 @@ input {
     justify-content: space-between;
     font-size: 18px;
 }
+
+.chat-popup {
+    height: 0px;
+    width: 350px;
+    background: black;
+    position: ABSOLUTE;
+    bottom: 10px;
+    right: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.chat-popup.open-chat {
+    border: 1px solid grey;
+
+    height: 300px;
+}

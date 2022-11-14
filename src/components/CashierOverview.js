@@ -4,6 +4,8 @@ export default function CashierOverview() {
 
     const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
     const ubch=useSelector(state => state.currentUser.UBCHchipCount)
+    const krill=useSelector(state => state.currentUser.krill)
+
 
     return(
     <div className="cashier-content">
@@ -32,9 +34,9 @@ export default function CashierOverview() {
         <tr className="row-4">
             <th><div className="logo-icon pink"></div></th>
             <th>Krill</th>
+            <th>{ krill }</th>
             <th>0</th>
-            <th>0</th>
-            <th>0</th>
+            <th>{ krill }</th>
         </tr>
         </table>
     </div>
