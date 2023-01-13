@@ -14,15 +14,20 @@ import ChatSettings from "../components/ChatSettings"
 import SoundSettings from "../components/SoundSettings"
 
 
+let serverState = {
+    numPlayers: 19,
+    numPlayersOnline: 11,
+    numTournaments: 3
+}
 
 let user = {
     username: "afrosamurai",
     password: "password",
-    UBTCchipCount: 83991,
-    UBCHchipCount: 127,
+    UBTCchipCount: 0,
+    UBCHchipCount: 0,
     rank: "Beginner",
     email: "afrosamurai119@gmail.com",
-    krill: 7388
+    krill: 0
 }
 
 
@@ -68,7 +73,8 @@ const initState = {
     slidePosition: 0, 
     changingSideBar: homeSideBar,
     currentUser: user,
-    chatState: ''
+    chatState: '',
+    serverState: serverState
 }
 
 

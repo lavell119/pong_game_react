@@ -6,7 +6,9 @@ export default function Header() {
     const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
     const ubch=useSelector(state => state.currentUser.UBCHchipCount)
     const krill=useSelector(state => state.currentUser.krill)
-
+    const numPlayers=useSelector(state => state.serverState.numPlayers)
+    const numPlayersOnline=useSelector(state => state.serverState.numPlayersOnline)
+    const numTournaments=useSelector(state => state.serverState.numTournaments)
 
 
     const dispatch=useDispatch()
@@ -16,13 +18,13 @@ export default function Header() {
         <img className="lobby-logo" src="blackjack-logo.png"></img>
         <div className="online-players-div">
             <div className="online-players-row">
-                <span class="orange-txt">207</span> players
+                <span class="orange-txt">{numPlayers}</span> players
             </div>
             <div className="online-players-row">
-                <span class="orange-txt">160</span> online
+                <span class="orange-txt">{numPlayersOnline}</span> players online
             </div>
             <div className="online-players-row">
-                <span class="orange-txt">3</span> tournaments
+                <span class="orange-txt">{numTournaments}</span> tournaments
             </div>
         </div>
         <div className="header-right">
