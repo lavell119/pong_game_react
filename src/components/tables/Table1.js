@@ -4,6 +4,7 @@ import './table_styles.css'
 export default function Table1() {
   return (
     <>
+    <div className ="table1_wrapper">
     <div class="winner hide"></div>
     <div class="play-again hide">Loading...</div>
     <div class="table-grid">
@@ -77,6 +78,7 @@ export default function Table1() {
                     </div>
             </div>
         </div>
+    </div>
     </div>
     </>
   )
