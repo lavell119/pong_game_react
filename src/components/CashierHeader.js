@@ -22,7 +22,7 @@ export default function CashierHeader () {
         
         let str='background-color'
         return(
-        <div className="cashier-header">
+        <div className="cashier-header slide-display-element">
             <div className={`cashier-header-ele ${activeClass[0]}`} onClick={()=>{
                 dispatch({ type: "CHANGE_CASHIER", payload: <CashierOverview /> })
                 dispatch({ type: "CHANGE_CASHIER_OVERVIEW"})

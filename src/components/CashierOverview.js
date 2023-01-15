@@ -8,7 +8,7 @@ export default function CashierOverview() {
 
 
     return(
-    <div className="cashier-content">
+    <div className="cashier-content slide-display-element">
         <table className="cashier-overview-table">
         <tr className="row-1">
             <th></th>

@@ -801,7 +801,28 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-name: move;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    z-index: -1111;
+
+
 }
+.slide-display-element {
+    animation-name: move;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes move {
+    from { transform: translateX(-110px)}
+    to { transform: translateX(0px)}
+}
+
+slide-display-element
+
+
 
 .account-information {
     align-items: flex-start;

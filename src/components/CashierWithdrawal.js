@@ -3,7 +3,7 @@ import greenBTC from './images/bitcoingreen.png'
 
 export default function CashierWithdrawal () {
     return (
-        <div className="deposit-snippet">
+        <div className="deposit-snippet slide-display-element">
             <div className="deposit-col-1">
                 <div className="large-crypto-logo-box">
                     <img src={greenBTC}></img>

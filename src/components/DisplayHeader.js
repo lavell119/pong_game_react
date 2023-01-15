@@ -20,7 +20,7 @@ export default function DisplayHeader() {
                 <div className="side-title">{sideTitle}</div>             
             </div>
             <div className="disp-right">
-                <div className="title">{title}</div>
+                <div className="title ">{title}</div>
             </div>
         </div>
     )

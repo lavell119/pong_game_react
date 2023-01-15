@@ -7,7 +7,7 @@ import Cashierp2p from './Cashierp2p.js'
 export default function CashierContent() {
     let cashierState= useSelector(state=>state.cashierContent)
     return(
-    <div className="cashier-content">
+    <div className="cashier-content slide-display-element">
         {cashierState}
     </div>
     )

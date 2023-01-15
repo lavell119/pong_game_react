@@ -1,6 +1,6 @@
 export default function AccountSecurity() {
     return (
-       <div className="account-security">
+       <div className="account-security slide-display-element">
             <div className="authentication-container">
                 <div className="auth-top">
                     Two-Factor Authentication

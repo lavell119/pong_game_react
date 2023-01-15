@@ -12,18 +12,17 @@ import Table1 from './tables/Table1.js'
 function App() {
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
-  //   <>
-  // <div className="top-third">
-  // <Header />
-  // <Seperator />
-  // <DisplayHeader />
-  // </div>
-  // <MiddleThird />
-  // <div className="bottom-third">
-  //   <FooterWidget />
-  // </div>
-  //   </>
-    <Table1 />
+    <>
+  <div className="top-third">
+  <Header />
+  <Seperator />
+  <DisplayHeader />
+  </div>
+  <MiddleThird />
+  <div className="bottom-third">
+    <FooterWidget />
+  </div>
+    </>
 )
 }
 

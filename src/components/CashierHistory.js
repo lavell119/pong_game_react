@@ -1,6 +1,6 @@
 export default function CashierHistory() {
     return (
-        <div className="history">
+        <div className="history slide-display-element">
             <div className="history-row-1">
                 <div className="history-row-1-part-1">
                 <select class="cash-history-select-1" placeholder="BTC">
