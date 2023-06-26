@@ -806,7 +806,8 @@ a {
     animation-iteration-count: 1;
     animation-direction: alternate;
     z-index: -1111;
-
+    background: red;
+    z-index: -3;
 
 }
 .slide-display-element {

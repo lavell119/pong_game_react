@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dcd47a20.css",
+    "main.js": "/static/js/main.ddf4bfa0.js",
+    "static/media/bitcoingreen.png": "/static/media/bitcoingreen.921c65bd2b0604326f2c.png",
+    "index.html": "/index.html",
+    "main.dcd47a20.css.map": "/static/css/main.dcd47a20.css.map",
+    "main.ddf4bfa0.js.map": "/static/js/main.ddf4bfa0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dcd47a20.css",
+    "static/js/main.ddf4bfa0.js"
+  ]
+}
