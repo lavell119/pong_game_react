@@ -1,14 +1,23 @@
-const User = require('../models/userModel')
+const User = require('./models/userModel')
 const express = require('express')
+const mongoose = require('mongoose')
 
 const app=express()
 
-mong_URI="mongodb+srv://Lavell119:<password>@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
+mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(mong_URI)
+    .then(()=>{
+        app.listen(4444, () => {
+            console.log('listening on port 4444')
+        })
+    }
 
-app.listen(4000, (err)=>{
-    console.log("listening on port 4000")
+)
 
-})
+// app.listen(4000, (err)=>{
+//     console.log("listening on port 4000")
+
+// })
 
 app.post('/login', (req,res)=>{
 
