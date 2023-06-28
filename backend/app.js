@@ -22,6 +22,8 @@ app.use(express.json())
 // })
 
 app.post('/login', (req,res)=>{
+    const {email, password} = req.body
+    console.log('email: ' + email + 'password: ' + password)
 
 })
 
