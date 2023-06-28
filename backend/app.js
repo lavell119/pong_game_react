@@ -14,6 +14,8 @@ mongoose.connect(mong_URI)
 
 )
 
+app.use(express.json())
+
 // app.listen(4000, (err)=>{
 //     console.log("listening on port 4000")
 
@@ -25,7 +27,7 @@ app.post('/login', (req,res)=>{
 
 app.post('/signup', async function(req,res){
     const {email, password} = req.body
-
+    //add user to database
     try {
         const User = await User.create({email, password})
         res.status(200).json(user)
