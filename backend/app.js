@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 
 const app=express()
 
+app.use(express.json())
+
 mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(mong_URI)
     .then(()=>{
@@ -14,7 +16,6 @@ mongoose.connect(mong_URI)
 
 )
 
-app.use(express.json())
 
 // app.listen(4000, (err)=>{
 //     console.log("listening on port 4000")
@@ -22,9 +23,7 @@ app.use(express.json())
 // })
 
 app.post('/login', (req,res)=>{
-    const {email, password} = req.body
-    console.log('email: ' + email + 'password: ' + password)
-
+    console.log(req.body)
 })
 
 app.post('/signup', async function(req,res){

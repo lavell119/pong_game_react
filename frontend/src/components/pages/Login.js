@@ -16,7 +16,7 @@
     setPassword(e.target.value)
   }
 
-  const login = async (e, email, password) => {
+  const login = async (e) => {
     e.preventDefault()
     const response = await fetch("/login", {
       method: 'POST',
