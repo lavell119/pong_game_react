@@ -35,7 +35,6 @@ app.post('/signup', async function(req,res){
     }catch(err) {
         res.status(400).send(err)
     }
-
 })
 
 
