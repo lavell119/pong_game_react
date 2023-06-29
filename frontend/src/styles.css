@@ -1768,4 +1768,8 @@ input {
     height: 300px;
 }
 
-
+.pong_table {
+    height: 100vh;
+    width: 100vw;
+    background: yellow;
+}

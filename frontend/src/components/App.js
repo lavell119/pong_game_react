@@ -9,6 +9,7 @@ import Table1 from './tables/Table1.js'
 import Home from './pages/Home.js'
 import Signup from './pages/Signup.js'
 import Login from './pages/Login.js'
+import Pong_Table from './Pong_Table.js'
 
 import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom'
 
@@ -29,6 +30,9 @@ function App() {
       </Route>
       <Route exact path ="/signup">
         <Signup />
+      </Route>
+      <Route exact path ="/table">
+        <Pong_Table />
       </Route>
       </Switch>
     </BrowserRouter>
