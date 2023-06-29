@@ -1760,8 +1760,12 @@ input {
     height: 300px;
 }
 
-.login {
+.login .signup {
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
 }
 
 
