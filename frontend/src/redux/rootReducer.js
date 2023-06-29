@@ -60,6 +60,9 @@ let settingsSideBar=
 {title: 'Table Skins', display: ''} 
 ] 
 
+/////--Pong Tables
+let numOfTables = 0
+
 /////--INITSTATE
 
 const initState = {
