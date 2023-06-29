@@ -9,7 +9,8 @@ import Table1 from './tables/Table1.js'
 import Home from './pages/Home.js'
 import Signup from './pages/Signup.js'
 import Login from './pages/Login.js'
-import Pong_Table from './Pong_Table.js'
+import Pong_Table from './PongComponents/Pong_Table.js'
+import AddTableButton from './PongComponents/AddTableButton.js'
 
 import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom'
 
@@ -20,6 +21,8 @@ function App() {
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
     <>
+        <AddTableButton />
+
     <BrowserRouter>
       <Switch>
       <Route exact path="/">
