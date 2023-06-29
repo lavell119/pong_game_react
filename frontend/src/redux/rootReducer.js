@@ -61,11 +61,12 @@ let settingsSideBar=
 ] 
 
 /////--Pong Tables
-let numOfTables = 0
 
 /////--INITSTATE
 
 const initState = {
+    numOfTables: 0,
+
     display: <Tables />,
     middleThirdOptions: <MiddleThird />,
     title: 'Lobby',
