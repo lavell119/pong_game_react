@@ -27,15 +27,26 @@
   }
 
    return (
+    <div className="login_page">
      <form onSubmit={login} class="login">
-        <label>Email</label>
-        <input type="email" name="email" value={email} onChange={changeEmail}></input>
-        <label>Password</label>
-        <input type="password" name="password" value={password} onChange={changePassword}></input>
-        {email}
-        {password}
-        <button>Login</button>
+        <div class="login_wrapper">
+          <div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" value={email} onChange={changeEmail}></input>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" value={password} onChange={changePassword}></input>
+            </div>  
+          </div>
+
+
+            <button>Login</button>
+
+        </div>       
      </form>
+     </div>
    )
  }
  
