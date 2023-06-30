@@ -21,7 +21,7 @@ function App() {
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
     <>
-        <AddTableButton />
+         <AddTableButton />
 
     <BrowserRouter>
       <Switch>

@@ -29,6 +29,7 @@
    return (
     <div className="login_page">
      <form onSubmit={login} class="login">
+      <h2>Login</h2>
         <div class="login_wrapper">
           <div>
             <div>
