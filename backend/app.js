@@ -27,11 +27,12 @@ app.post('/login', async(req,res)=>{
     console.log(email, password)
     //add user to database
     try {
-        const User = await User.create({email, password})
+        const user = await User.create({email, password})
         res.status(200).json(user)
         console.log("user saved")
     }catch(err) {
         res.status(400).send(err)
+        console.log(err)
     }
 })
 
@@ -44,6 +45,7 @@ app.post('/signup', async function(req,res){
     }catch(err) {
         res.status(400).send(err)
     }
+    console.log('user saved to db')
 })
 
 
