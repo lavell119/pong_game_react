@@ -22,8 +22,17 @@ mongoose.connect(mong_URI)
 
 // })
 
-app.post('/login', (req,res)=>{
-    console.log(req.body)
+app.post('/login', async(req,res)=>{
+    const {email, password} = req.body
+    console.log(email, password)
+    //add user to database
+    try {
+        const User = await User.create({email, password})
+        res.status(200).json(user)
+        console.log("user saved")
+    }catch(err) {
+        res.status(400).send(err)
+    }
 })
 
 app.post('/signup', async function(req,res){

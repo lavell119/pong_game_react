@@ -14,5 +14,11 @@ const userSchema = new Schema({
     }
 })
 
+userSchema.statics.signup = async function(email, password) {
+    const user = await this.create({ email, password })
+    console.log("user saved to db")
+    return user
+}
+
 module.exports = mongoose.model('User', userSchema)
 
