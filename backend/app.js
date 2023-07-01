@@ -19,7 +19,7 @@ mongoose.connect(mong_URI)
 )
 
 //controller functions
-const { signupUser, loginUser } = require('/controllers/UserController')
+const { signupUser, loginUser } = require('./controllers/UserController')
 
 //add table
 let numOfTables = 0

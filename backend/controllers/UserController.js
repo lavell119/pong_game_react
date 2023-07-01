@@ -1,4 +1,4 @@
-const User = require('../models/User')
+const User = require('../models/UserModel')
 
 
 //login user
@@ -8,7 +8,8 @@ const loginUser = async (rep, res) => {
 
 //signup user
 const signupUser = async (req, res) => {
-    res.json({mssg: 'signup user'})
+    const { email, password } = req.body
+    User.signup(email, password)
 }
 
 module.exports = { signupUser, loginUser }
