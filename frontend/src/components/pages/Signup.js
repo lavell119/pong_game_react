@@ -16,9 +16,9 @@ import React from 'react'
     setPassword(e.target.value)
   }
 
-  const login = async (e) => {
+  const signup = async (e) => {
     e.preventDefault()
-    const response = await fetch("/login", {
+    const response = await fetch("/signup", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, password})
@@ -28,7 +28,7 @@ import React from 'react'
 
    return (
     <div className="login_page">
-     <form onSubmit={login} class="login">
+     <form onSubmit={signup} class="login">
       <h2>Signup</h2>
         <div class="login_wrapper">
           <div>
@@ -41,10 +41,7 @@ import React from 'react'
                 <input type="password" name="password" value={password} onChange={changePassword}></input>
             </div>  
           </div>
-
-
-            <button>Signup</button>
-
+          <button>Signup</button>
         </div>       
      </form>
      </div>

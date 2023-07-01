@@ -1,4 +1,3 @@
-const User = require('./models/userModel')
 const express = require('express')
 const mongoose = require('mongoose')
 
@@ -20,7 +19,7 @@ mongoose.connect(mong_URI)
 )
 
 //controller functions
-const { signupUser, loginUser } = require('../controllers/UserController')
+const { signupUser, loginUser } = require('/controllers/UserController')
 
 //add table
 let numOfTables = 0
