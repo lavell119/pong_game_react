@@ -2,6 +2,7 @@ const User = require('./models/userModel')
 const express = require('express')
 const mongoose = require('mongoose')
 
+//create express app
 const app=express()
 
 //middleware
@@ -18,6 +19,9 @@ mongoose.connect(mong_URI)
     }
 )
 
+//controller functions
+const { signupUser, loginUser } = require('../controllers/UserController')
+
 //add table
 let numOfTables = 0
 
@@ -29,33 +33,26 @@ app.get('/addtable', async(req,res)=>{
 })
 
 //routes
-app.post('/login', async(req,res)=>{
-    const {email, password} = req.body
-    console.log(email, password)
-    //add user to database
-    try {
-        const user = await User.create({email, password})
-        res.status(200).json(user)
-        console.log("user saved")
-    }catch(err) {
-        res.status(400).send(err)
-        console.log(err)
-    }
-})
+app.post('/login', loginUser )
+    
 
-app.post('/signup', async function(req,res){
-    const {email, password} = req.body
-    //add user to database
-    try {
-        const User = await User.create({email, password})
-        res.status(200).json(user)
-    }catch(err) {
-        res.status(400).send(err)
-    }
-    console.log('user saved to db')
-})
+app.post('/signup', signupUser)
 
 
 
+
+// app.post('/login', async(req,res)=>{
+//     const {email, password} = req.body
+//     console.log(email, password)
+//     //add user to database
+//     try {
+//         const user = await User.create({email, password})
+//         res.status(200).json(user)
+//         console.log("user saved")
+//     }catch(err) {
+//         res.status(400).send(err)
+//         console.log(err)
+//     }
+// })
 
 
