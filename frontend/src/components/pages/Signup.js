@@ -43,7 +43,7 @@ import React from 'react'
           </div>
 
 
-            <button>Login</button>
+            <button>Signup</button>
 
         </div>       
      </form>
