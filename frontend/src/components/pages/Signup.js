@@ -34,7 +34,7 @@ import React from 'react'
           <div>
             <div>
                 <label>Email</label>
-                <input type="email" name="email" value={email} onChange={changeEmail}></input>
+                <input  name="email" value={email} onChange={changeEmail}></input>
             </div>
             <div>
                 <label>Password</label>
