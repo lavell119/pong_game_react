@@ -23,7 +23,8 @@
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, password})
     })
-    console.log('request sent')
+    const json = await response.json()
+    console.log(json)
   }
 
    return (
