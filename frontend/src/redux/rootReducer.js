@@ -76,7 +76,7 @@ const initState = {
     sideBarActive: ['activ', null, null, null, null],
     slidePosition: 0, 
     changingSideBar: homeSideBar,
-    currentUser: user,
+    currentUser: null,
     chatState: '',
     serverState: serverState
 }
@@ -254,6 +254,12 @@ const rootReducer = (state = initState, action) => {
             ...state,
             openChat: current=>!current 
 
+            }
+
+        case "UPDATE_USER_STATE":
+            return {
+                ...state,
+                pong_user: 'user logged in'
             }
 
         default: 

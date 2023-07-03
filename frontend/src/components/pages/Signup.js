@@ -1,10 +1,13 @@
 import React from 'react'
  import {useState} from 'react'
+ import { useDispatch } from "react-redux"
+
 
  
  export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const dispatch=useDispatch()
 
   const changeEmail = (e) =>{
     e.preventDefault()
@@ -24,6 +27,7 @@ import React from 'react'
       body: JSON.stringify({email, password})
     })
     const json = await response.json()
+    {dispatch({ type: 'UPDATE USER STATE' })}
     console.log(json)
 
     

@@ -1,8 +1,11 @@
- import React from 'react'
+import React from 'react'
  import {useState} from 'react'
+ import { useDispatch } from 'react-redux'
 
- 
+
  export default function Login() {
+  const dispatch=useDispatch()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -25,6 +28,7 @@
     })
     const json = await response.json()
     console.log(json)
+
   }
 
    return (
@@ -43,7 +47,7 @@
             </div>  
           </div>
 
-
+          <div>no user</div>
             <button>Login</button>
 
         </div>       
