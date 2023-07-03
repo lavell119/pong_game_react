@@ -1,4 +1,13 @@
 const User = require('../models/userModel')
+const jwt = require('jsonwebtoken')
+
+
+const SECRET = 'ekwll2p920525-2'
+
+//create json web token function
+const createToken = (_id) => {
+    return jwt.sign({_id}, SECRET, {expiresIn: '3d'})
+} 
 
 
 //login user
