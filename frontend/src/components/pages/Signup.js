@@ -4,7 +4,7 @@ import React from 'react'
 
 
  
- export default function Login() {
+ export default function () {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const dispatch=useDispatch()
