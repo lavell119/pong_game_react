@@ -16,12 +16,13 @@ import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom'
 
 
 
-
 function App() {
+  const user = useSelector(state => state.pong_user)
+
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
     <>
-         <AddTableButton />
+         <button>{user}</button>
 
     <BrowserRouter>
       <Switch>

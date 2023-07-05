@@ -5,6 +5,7 @@ export const useSignup = () => {
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
     const dispatch = useDispatch()
+    const user = useSelector(state => state.pong_user)
 
     const signup = async(email, password) => {
         setIsLoading(true)
@@ -25,9 +26,10 @@ export const useSignup = () => {
         if(response.ok) {
             //save the user to local storage
             localStorage.setItem('user', JSON.stringify(json))
-
+            console.log(user)
             //upddate the auth context with
             dispatch({type: 'UPDATE_USER_STATE'})
+            console.log(user)
 
             setIsLoading(false)
         }
