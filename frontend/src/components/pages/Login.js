@@ -1,9 +1,14 @@
 import React from 'react'
- import {useState} from 'react'
- import { useDispatch } from 'react-redux'
+import {useState} from 'react'
+import { useDispatch } from 'react-redux'
+import {useSelector} from 'react-redux'
 
 
- export default function Login() {
+
+export default function Login() {
+  const user=useSelector(state => state.pong_user)
+  console.log(user)
+
   const dispatch=useDispatch()
 
   const [email, setEmail] = useState('')
@@ -28,7 +33,6 @@ import React from 'react'
     })
     const json = await response.json()
     console.log(json)
-
   }
 
    return (
@@ -46,8 +50,6 @@ import React from 'react'
                 <input type="password" name="password" value={password} onChange={changePassword}></input>
             </div>  
           </div>
-
-          <div>no user</div>
             <button>Login</button>
 
         </div>       

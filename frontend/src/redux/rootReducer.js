@@ -78,7 +78,8 @@ const initState = {
     changingSideBar: homeSideBar,
     currentUser: null,
     chatState: '',
-    serverState: serverState
+    serverState: serverState,
+    pong_user: "no user"
 }
 
 
