@@ -57,6 +57,7 @@ export default function Signup() {
             </div>  
           </div>
           <button>Signup</button>
+          {error && <div className="error">{error}</div>}
         </div>       
      </form>
      </div>
