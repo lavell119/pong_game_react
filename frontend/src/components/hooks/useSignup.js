@@ -10,7 +10,7 @@ export const useSignup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch("/login", {
+        const response = await fetch("/signup", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
@@ -34,3 +34,4 @@ export const useSignup = () => {
     }
     return { signup, isLoading, error }
 }
+

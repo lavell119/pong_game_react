@@ -1,12 +1,13 @@
 import React from 'react'
- import {useState} from 'react'
- import { useDispatch } from "react-redux"
+import {useState} from 'react'
+import { useDispatch } from "react-redux"
+import { useSignup } from "../hooks/useSignup"
 
 
- 
- export default function () {
+export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const { signup, error, isLoading } = useSignup()
   const dispatch=useDispatch()
 
   const changeEmail = (e) =>{
@@ -19,7 +20,7 @@ import React from 'react'
     setPassword(e.target.value)
   }
 
-  const signup = async (e) => {
+  const signup2 = async (e) => {
     e.preventDefault()
     const response = await fetch("/signup", {
       method: 'POST',
@@ -34,9 +35,15 @@ import React from 'react'
     console.log('request sent')
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    await signup(email, password)
+  }
+
    return (
     <div className="login_page">
-     <form onSubmit={signup} class="login">
+     <form onSubmit={handleSubmit} class="login">
       <h2>Signup</h2>
         <div class="login_wrapper">
           <div>
