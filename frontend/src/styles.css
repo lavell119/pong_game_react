@@ -1822,3 +1822,12 @@ input {
 .error {
     align-self: flex-end;
 }
+
+.nav {
+    color: white;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

@@ -8,7 +8,7 @@ import Home from './pages/Home.js'
 import Signup from './pages/Signup.js'
 import Login from './pages/Login.js'
 import Pong_Table from './PongComponents/Pong_Table.js'
-import { BrowserRouter, Route, Switch, Routes, Navigate } from 'react-router-dom'
+import { BrowserRouter, Link,  Route, Switch, Routes, Navigate } from 'react-router-dom'
 
 
 
@@ -18,6 +18,13 @@ function App() {
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
     <>
+    <nav className="nav">
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+
+      {/* <Link to="/login">Login</Link>
+      <Link to="/signup">Signup</Link> */}
+    </nav>
          <button>{user}</button>
 
     <BrowserRouter>
