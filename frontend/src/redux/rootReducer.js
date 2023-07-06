@@ -257,11 +257,20 @@ const rootReducer = (state = initState, action) => {
 
             }
 
+        //authentication
         case "UPDATE_USER_STATE":
             return {
                 ...state,
                 pong_user: 'user logged in'
             }
+
+        case "LOGOUT":
+            return {
+                ...state,
+                pong_user: null
+            }
+
+        
 
         default: 
             return state
