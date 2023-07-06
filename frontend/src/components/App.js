@@ -19,7 +19,7 @@ function App() {
   return (
     <>
     <Navbar />
-         <button>{user}</button>
+         {/* <button>{user}</button> */}
 
     <BrowserRouter>
       <Routes>

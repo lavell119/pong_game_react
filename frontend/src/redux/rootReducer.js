@@ -270,6 +270,12 @@ const rootReducer = (state = initState, action) => {
                 pong_user: null
             }
 
+        case "LOGIN":
+            return {
+                ...state,
+                pong_user: action.payload
+            
+            }
         
 
         default: 
