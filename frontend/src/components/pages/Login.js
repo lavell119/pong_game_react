@@ -1,56 +1,36 @@
 import React from 'react'
 import {useState} from 'react'
-import { useDispatch } from 'react-redux'
-import {useSelector} from 'react-redux'
-
-
+import { useLogin } from '../hooks/useLogin'
 
 export default function Login() {
-  const user=useSelector(state => state.pong_user)
-  console.log(user)
-
-  const dispatch=useDispatch()
-
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const {login, error, isLoading} = useLogin()
 
-  const changeEmail = (e) =>{
+  const handleSubmit =async(e) => {
     e.preventDefault()
-    setEmail(e.target.value)
+
+    await login(email, password)
   }
 
-  const changePassword = (e) =>{
-    e.preventDefault()
-    setPassword(e.target.value)
-  }
-
-  const login = async (e) => {
-    e.preventDefault()
-    const response = await fetch("/login", {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, password})
-    })
-    const json = await response.json()
-    console.log(json)
-  }
 
    return (
     <div className="login_page">
-     <form onSubmit={login} class="login">
+     <form onSubmit={handleSubmit} class="login">
       <h2>Login</h2>
-        <div class="login_wrapper">
+        <div className="login_wrapper">
           <div>
             <div>
                 <label>Email</label>
-                <input type="email" name="email" value={email} onChange={changeEmail}></input>
+                <input type="email" name="email" value={email} onChange={(e) =>setEmail(e.target.value)}></input>
             </div>
             <div>
                 <label>Password</label>
-                <input type="password" name="password" value={password} onChange={changePassword}></input>
+                <input type="password" name="password" value={password} onChange={(e) =>setPassword(e.target.value)}></input>
             </div>  
           </div>
-            <button>Login</button>
+            <button disabled = {isLoading}>Login</button>
+            {error && <div className="error">{error}</div>}
 
         </div>       
      </form>
