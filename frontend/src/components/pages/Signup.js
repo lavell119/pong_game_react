@@ -56,9 +56,11 @@ export default function Signup() {
                 <input type="password" name="password" value={password} onChange={changePassword}></input>
             </div>  
           </div>
-          <button>Signup</button>
+          <button disabled={ isLoading }>Signup</button>
           {error && <div className="error">{error}</div>}
-        </div>       
+
+        </div>   
+    
      </form>
      </div>
    )

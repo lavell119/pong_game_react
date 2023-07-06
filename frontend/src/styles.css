@@ -1795,7 +1795,7 @@ input {
     height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: fle;
+    align-items: flex-start;
     justify-content: center;
     padding: 0px;
     gap: 10px;
@@ -1816,4 +1816,9 @@ input {
     width: 80px;
     height: 30px;
     align-self: center;
+
+}
+
+.error {
+    align-self: flex-end;
 }
