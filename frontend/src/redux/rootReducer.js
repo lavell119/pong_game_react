@@ -79,7 +79,7 @@ const initState = {
     currentUser: null,
     chatState: '',
     serverState: serverState,
-    pong_user: "no user"
+    pong_user: null
 }
 
 

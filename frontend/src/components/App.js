@@ -22,14 +22,14 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-      <Route exact path="/" element={<Home />}>
-      </Route>
-      <Route exact path ="/login" element ={<Login />}>
-      </Route>
-      <Route exact path ="/signup" element = {<Signup />}>
-      </Route>
-      <Route exact path ="/table" element = {<Pong_Table />}>
-      </Route>
+        <Route exact path="/" element={user ? <Home />: <Navigate to="/login" />}>
+        </Route>
+        <Route exact path ="/login" element ={!user ? <Login /> : <Navigate to= "/" />}>
+        </Route>
+        <Route exact path ="/signup" element = {!user ? <Signup /> : <Navigate to= "/" />}>
+        </Route>
+        <Route exact path ="/table" element = {<Pong_Table />}>
+        </Route>
       </Routes>
     </BrowserRouter>
     
