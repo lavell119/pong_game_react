@@ -22,18 +22,13 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-      <Route exact path="/">
-        
-        <Home />
+      <Route exact path="/" element={<Home />}>
       </Route>
-      <Route exact path ="/login">
-        <Login />
+      <Route exact path ="/login" element ={<Login />}>
       </Route>
-      <Route exact path ="/signup">
-        <Signup />
+      <Route exact path ="/signup" element = {<Signup />}>
       </Route>
-      <Route exact path ="/table">
-        <Pong_Table />
+      <Route exact path ="/table" element = {<Pong_Table />}>
       </Route>
       </Routes>
     </BrowserRouter>
