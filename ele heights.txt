@@ -1,0 +1,6 @@
+nav - 4vh
+(lobby) header ----- 15vh
+seperator -----5vh
+display header -----5vh
+middlethird -------- 66vh
+bottom third ------ 6%
