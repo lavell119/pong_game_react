@@ -7,14 +7,14 @@ export const useSignup = () => {
     const dispatch = useDispatch()
     const user = useSelector(state => state.pong_user)
 
-    const signup = async(email, password) => {
+    const signup = async(email, password, username) => {
         setIsLoading(true)
         setError(null)
 
         const response = await fetch("/signup", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({email, password})
+            body: JSON.stringify({email, password, username})
         })
         const json = await response.json()
         console.log("json: ", json)
