@@ -502,7 +502,6 @@ body {
     width: 100%;
     height: 5vh;
     background: rgb(29, 29, 29);
-    background: white;
 }
 
 .display-header {
@@ -1738,11 +1737,12 @@ input {
 
 .online-players-div {
     height: 90%;
-    width: 130px;
+    width: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 18px;
+    font-size: 15px;
 }
 
 .chat-popup {
@@ -1829,6 +1829,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
     padding-right: 7px;
     background: rgb(48, 48, 48);
