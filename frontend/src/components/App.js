@@ -15,6 +15,7 @@ import {useDispatch} from 'react-redux'
 
 function App() {
   const user = useSelector(state => state.pong_user)
+  console.log('user state: ', user)
   const dispatch= useDispatch()
   useEffect(() => {
     //check if user exists in local storage

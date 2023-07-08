@@ -27,7 +27,7 @@ export const useLogin = () => {
             localStorage.setItem('user', JSON.stringify(json))
 
             //update redux user state
-            dispatch({type: 'LOGIN', payload: response})
+            dispatch({type: 'LOGIN', payload: json.user})
 
             setIsLoading(false)
         }
