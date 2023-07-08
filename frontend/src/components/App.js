@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import Header from './Header.js'
 import Seperator from './Seperator.js'
 import DisplayHeader from './DisplayHeader.js'
@@ -10,10 +10,22 @@ import Login from './pages/Login.js'
 import Pong_Table from './PongComponents/Pong_Table.js'
 import { BrowserRouter, Link,  Route, Switch, Routes, Navigate } from 'react-router-dom'
 import Navbar from './Navbar.js'
+import {useDispatch} from 'react-redux'
 
 
 function App() {
   const user = useSelector(state => state.pong_user)
+  const dispatch= useDispatch()
+  useEffect(() => {
+    //check if user exists in local storage
+    const user = JSON.parse(localStorage.getItem('user'))
+
+    if(user) {
+      console.log('user exists in local storage')
+
+      dispatch({ type: 'LOGIN', payload: user})
+    }
+  }, [])
 
   const middleThirdToggle=useSelector(state => state.middleThirdOptions)
   return (
