@@ -646,7 +646,6 @@ a {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background: yellow;
 }
 
 .bottom-third {

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 export default function Header() {
     const username=useSelector(state => state.pong_user.username)
     const rank=useSelector(state => state.pong_user.rank)
-    const chipCount=useSelector(state => state.pong_user.chipCount)
+    const chipCount=useSelector(state => state.pong_user.chipcount)
     const krill=useSelector(state => state.pong_user.krill)
     const numPlayers=useSelector(state => state.serverState.numPlayers)
     const numPlayersOnline=useSelector(state => state.serverState.numPlayersOnline)

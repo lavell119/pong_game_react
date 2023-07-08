@@ -3,12 +3,12 @@ import { useSelector } from "react-redux"
 export default function AccountInformation() {
 
     
-    const username=useSelector(state => state.currentUser.username)
-    const rank=useSelector(state => state.currentUser.rank)
-    const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
-    const ubch=useSelector(state => state.currentUser.UBCHchipCount)
-    const krill=useSelector(state => state.currentUser.krill)
-    const email=useSelector(state => state.currentUser.email)
+    const username=useSelector(state => state.pong_user.username)
+    const rank=useSelector(state => state.pong_user.rank)
+    const ubtc=useSelector(state => state.pong_user.UBTCchipCount)
+    const ubch=useSelector(state => state.pong_user.UBCHchipCount)
+    const krill=useSelector(state => state.pong_user.krill)
+    const email=useSelector(state => state.pong_user.email)
 
 
     return (
