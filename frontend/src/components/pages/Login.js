@@ -1,11 +1,25 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useEffect } from 'react'
 import { useLogin } from '../hooks/useLogin'
+import { useDispatch} from 'react-redux'
 
 export default function Login() {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const {login, error, isLoading} = useLogin()
+
+  useEffect(() => {
+    //check if user exists in local storage
+    const user = JSON.parse(localStorage.getItem('user'))
+
+    if(user) {
+      console.log('user exists in local storage')
+
+      dispatch({ type: 'LOGIN', payload: user})
+
+    }
+  })
 
   const handleSubmit =async(e) => {
     e.preventDefault()
