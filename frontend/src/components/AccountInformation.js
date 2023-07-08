@@ -5,8 +5,8 @@ export default function AccountInformation() {
     
     const username=useSelector(state => state.pong_user.username)
     const rank=useSelector(state => state.pong_user.rank)
-    const ubtc=useSelector(state => state.pong_user.UBTCchipCount)
-    const ubch=useSelector(state => state.pong_user.UBCHchipCount)
+    const chips=useSelector(state => state.pong_user.chipcount)
+
     const krill=useSelector(state => state.pong_user.krill)
     const email=useSelector(state => state.pong_user.email)
 
@@ -47,12 +47,10 @@ export default function AccountInformation() {
                 <div className="personal-info">
                     <div className="widget between">
                         <div className="personal-info-text bold">
-                            <div>uBTC</div>
-                            <div>uBCH</div>
+                            <div>Chip Balance:</div>
                         </div>
                         <div className="personal-info-text">
-                            <div class="green-txt">{ ubtc }</div>
-                            <div class="orange-txt">{ ubch }</div>
+                            <div class="green-txt">{ chips }</div>
                         </div>
                     </div>
                     <div className="widget between">
