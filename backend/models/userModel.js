@@ -5,6 +5,19 @@ const validator = require('validator')
 const Schema = mongoose.Schema 
 
 const userSchema = new Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    chipcount: {
+        type: Number,
+        default: 0
+    },
+    rank: {
+        type: Number,
+        default: 0
+    },
     email: {
         type: String,
         required: true,
@@ -13,6 +26,10 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    krill: {
+        type: Number,
+        default: 0
     }
 })
 
