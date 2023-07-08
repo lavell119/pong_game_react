@@ -24,7 +24,7 @@ function App() {
     if(user) {
       console.log('user exists in local storage')
 
-      dispatch({ type: 'LOGIN', payload: user})
+      dispatch({ type: 'LOGIN', payload: user.user})
     }
   }, [])
 
