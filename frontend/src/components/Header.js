@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux"
 
 export default function Header() {
-    const username=useSelector(state => state.currentUser.username)
-    const rank=useSelector(state => state.currentUser.rank)
-    const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
-    const ubch=useSelector(state => state.currentUser.UBCHchipCount)
-    const krill=useSelector(state => state.currentUser.krill)
+    // const username=useSelector(state => state.currentUser.username)
+    // const rank=useSelector(state => state.currentUser.rank)
+    // const ubtc=useSelector(state => state.currentUser.UBTCchipCount)
+    // const ubch=useSelector(state => state.currentUser.UBCHchipCount)
+    // const krill=useSelector(state => state.currentUser.krill)
     const numPlayers=useSelector(state => state.serverState.numPlayers)
     const numPlayersOnline=useSelector(state => state.serverState.numPlayersOnline)
     const numTournaments=useSelector(state => state.serverState.numTournaments)

@@ -5,11 +5,11 @@ const validator = require('validator')
 const Schema = mongoose.Schema 
 
 const userSchema = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
+    // username: {
+    //     type: String,
+    //     required: true,
+    //     unique: true
+    // },
     chipcount: {
         type: Number,
         default: 0
