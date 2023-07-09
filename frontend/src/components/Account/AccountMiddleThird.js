@@ -1,9 +1,8 @@
 import { useState } from "react"
-import Tables from "./Tables"
 import { useSelector, useDispatch } from "react-redux"
-import ChangePassword from "../components/ChangePassword"
-import AccountInformation from "../components/AccountInformation"
-import ChangeEmail from "../components/ChangeEmail"
+import ChangePassword from "../ChangePassword"
+import AccountInformation from "./AccountInformation"
+import ChangeEmail from "../ChangeEmail"
 
 
 export default function AccountMiddleThird() {

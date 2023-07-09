@@ -1,6 +1,6 @@
-import qrPic from './images/qr_code.jpg'
-import BTC from './images/bitcoin.png'
-import greenBTC from './images/bitcoingreen.png'
+import qrPic from '../images/qr_code.jpg'
+import BTC from '../images/bitcoin.png'
+import greenBTC from '../images/bitcoingreen.png'
 
 
 export default function CashierDeposit () {

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import Home from './pages/Home.js'
 import Signup from './pages/Signup.js'
 import Login from './pages/Login.js'
-import Pong_Table from './PongComponents/Pong_Table.js'
+// import Pong_Table from './PongComponents/Pong_Tables.js'
 import { BrowserRouter, Link,  Route, Switch, Routes, Navigate } from 'react-router-dom'
 import Navbar from './Navbar.js'
 import {useDispatch} from 'react-redux'
@@ -42,8 +42,8 @@ function App() {
         </Route>
         <Route exact path ="/signup" element = {!user ? <Signup /> : <Navigate to= "/" />}>
         </Route>
-        <Route exact path ="/table" element = {<Pong_Table />}>
-        </Route>
+        {/* <Route exact path ="/table" element = {<Pong_Table />}>
+        </Route> */}
       </Routes>
     </BrowserRouter>
     
