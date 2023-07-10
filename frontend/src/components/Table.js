@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
-export default function Table() {
+export default function Table(props) {
+    const id =props.id
     /*let ele = document.querySelector('.number-of-players-ele')
     setInterval(function(){
         if (ele.innerText!=='Waiting for players...')
@@ -15,6 +16,7 @@ export default function Table() {
                 <div className="tble-header">
                     <div>Stakes</div>
                     <text className="stakes">$1 / $2</text>
+                    <text>{id}</text>
                 </div>
                 <div className="tble">
                     <div className="tble-plyrs-wrapper">
@@ -23,10 +25,10 @@ export default function Table() {
                         <div className="plyr plyr3"></div>
                         <div className="plyr plyr4"></div>
                     </div>
-                </div>
+                </div>s
                 <div className="tble-footer">
                     <div className="join-btn" onClick={()=>{
-                        window.open('/Table')
+                        window.open(`/table/${id}`)
                     }}>
                         JOIN TABLE
                     </div>
