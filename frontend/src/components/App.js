@@ -42,6 +42,8 @@ function App() {
         </Route>
         <Route exact path ="/signup" element = {!user ? <Signup /> : <Navigate to= "/" />}>
         </Route>
+        <Route exact path ="/table" element = {Signup}>
+        </Route>
         {/* <Route exact path ="/table" element = {<Pong_Table />}>
         </Route> */}
       </Routes>
