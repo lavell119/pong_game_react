@@ -9,7 +9,12 @@ export default function Pong_Table() {
 
   return (
     <div className="pong_table">
-      <div class="table_title"><h2>Table {id}</h2></div>
+      <div className="table_title"><h2>Table {id}</h2></div>
+      <div className="game_table">
+        <div className="pong_player player_1"></div>
+        <div className="pong_player player_2"></div>
+
+      </div>
     </div>
   )
 }
