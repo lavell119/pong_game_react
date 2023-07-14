@@ -1865,4 +1865,9 @@ input {
     height: 100px;
     width: 20px;
     background: white;
+    opacity: .8;
+}
+
+.pong_player:hover {
+    opacity: 1;
 }

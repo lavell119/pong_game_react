@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 //create express app
 const app=express()
+let server
 
 //middleware
 app.use(express.json())
@@ -12,7 +13,7 @@ mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWr
 mongoose.connect(mong_URI)
     .then(()=>{
         console.log('Connected to db')
-        app.listen(4444, () => {
+        const server=app.listen(4444, () => {
             console.log('listening on port 4444')
         })
     }
