@@ -1859,6 +1859,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .pong_player {
@@ -1870,4 +1871,12 @@ input {
 
 .pong_player:hover {
     opacity: 1;
+}
+
+.player_names_display {
+    border-bottom: 1px solid black;
+    height: 35px;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }

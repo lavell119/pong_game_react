@@ -36,6 +36,8 @@ io=socket(server, {cors: {
 })
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id)
+    socket.emit('table-joined')
+    
 })
 
 //controller functions
