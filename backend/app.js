@@ -1,9 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const socket = require('socket.io')
 
 //create express app
 const app=express()
-let server
+// let server=""
+// let io=""
 
 //middleware
 app.use(express.json())
@@ -13,11 +15,28 @@ mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWr
 mongoose.connect(mong_URI)
     .then(()=>{
         console.log('Connected to db')
-        const server=app.listen(4444, () => {
-            console.log('listening on port 4444')
-        })
+    //     server=app.listen(4444, () => {
+    //     io=socket(server)
+    //     io.on('connection', function(socket){
+    //         console.log('made socket connection')
+    //     })
+    //         console.log('listening on port 4444')
+    //     })
     }
 )
+
+const server=app.listen(4444, ()=>{
+    console.log("server listening on port 4444")
+})
+
+io=socket(server, {cors: {
+    //why it wasnt working
+    origin: '*'
+}
+})
+io.on('connection', function(socket){
+             console.log('made socket connection')
+       })
 
 //controller functions
 const { signupUser, loginUser } = require('./controllers/UserController')
@@ -35,24 +54,7 @@ app.get('/addtable', async(req,res)=>{
 //routes
 app.post('/login', loginUser )
     
-
 app.post('/signup', signupUser)
 
-
-
-
-// app.post('/login', async(req,res)=>{
-//     const {email, password} = req.body
-//     console.log(email, password)
-//     //add user to database
-//     try {
-//         const user = await User.create({email, password})
-//         res.status(200).json(user)
-//         console.log("user saved")
-//     }catch(err) {
-//         res.status(400).send(err)
-//         console.log(err)
-//     }
-// })
-
+//socket setup
 
