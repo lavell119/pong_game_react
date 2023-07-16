@@ -3,19 +3,20 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import io from "socket.io-client"
 import { useEffect } from 'react'
+import { useState } from 'react'
 
 const socket =''
 
 export default function Pong_Table() {
+    
     //socket setup
     const { id  } = useParams()
+    const reduxTable= 'table' + id
+    console.log(reduxTable)
     const numberOfTables = useSelector(state => state.numOfTables)
-
 
     const pongTables = useSelector(state => state.pongTables)
     console.log(pongTables)
-
-
 
     //join table function
     const joinTable = function(player){
@@ -23,6 +24,11 @@ export default function Pong_Table() {
       socket.on('table-joined', ()=>{
         console.log('taergerg')
       })
+    }
+
+    const joinTable2 = function(){
+      const socket = io.connect('http://localhost:4444')
+      socket.emit('join-tablet', {table: reduxTable})
     }
     
       useEffect(()=>{
@@ -42,7 +48,7 @@ export default function Pong_Table() {
           <div className="player_name player_2_name"></div>
         </div>
         <div className="pong_player player_1">
-          <button onClick={()=>joinTable(1)}>Join</button>
+          <button onClick={joinTable2}>Join</button>
         </div>
         <div className="pong_player player_2">
           <button>Join</button>

@@ -37,8 +37,17 @@ io=socket(server, {cors: {
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id)
     socket.emit('table-joined')
+    socket.on('join-tablet', (data)=>{
+        console.log(data)
+    })
+
+    
     
 })
+io.on('join-tablet', function(data){
+    console.log(data)
+}
+)
 
 //controller functions
 const { signupUser, loginUser } = require('./controllers/UserController')
