@@ -322,15 +322,16 @@ const rootReducer = (state = initState, action) => {
         
         //pong
         case "join-tablet":
+            const test="...state.table4"
             return {
                 ...state,
                 pongTables: {
                     ...state.pongTables,
                     [action.payload.table]: {
-                        [action.payload.player]: 'user'
+                        ...state.pongTables[action.payload.table],
+                        [action.payload.player]: 'user'     
                     }
-                }
-            
+                } 
             }
 
         default: 

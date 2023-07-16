@@ -34,9 +34,10 @@ export default function Pong_Table() {
       socket.on('join-tablet', (data)=>{
         console.log(data)
         //prepare dispatch payload
+        let test ="...state.table1"
         let player='player'+data.player
         let table ='table'+data.table
-        dispatch({ type: "join-tablet", payload: {table: table, player: player}})
+        dispatch({ type: "join-tablet", payload: {table: table, player: player, test: test}})
         console.log(pongTables)
       })
       
@@ -61,7 +62,7 @@ export default function Pong_Table() {
           <button onClick={()=>joinTable2(1)}>Join</button>
         </div>
         <div className="pong_player player_2">
-          <button>Join</button>
+          <button onClick={()=>joinTable2(2)}>Join</button>
         </div>
 
       </div>
