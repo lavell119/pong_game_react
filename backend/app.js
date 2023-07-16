@@ -11,10 +11,10 @@ const app=express()
 app.use(express.json())
 
 //connect to db and start server
-mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
-mongoose.connect(mong_URI)
-    .then(()=>{
-        console.log('Connected to db')
+// mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
+// mongoose.connect(mong_URI)
+//     .then(()=>{
+//         console.log('Connected to db')
     //     server=app.listen(4444, () => {
     //     io=socket(server)
     //     io.on('connection', function(socket){
@@ -22,8 +22,8 @@ mongoose.connect(mong_URI)
     //     })
     //         console.log('listening on port 4444')
     //     })
-    }
-)
+//     }
+// )
 
 const server=app.listen(4444, ()=>{
     console.log("server listening on port 4444")

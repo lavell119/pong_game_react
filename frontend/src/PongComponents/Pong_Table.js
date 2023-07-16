@@ -10,6 +10,13 @@ export default function Pong_Table() {
     //socket setup
     const { id  } = useParams()
     const numberOfTables = useSelector(state => state.numOfTables)
+
+
+    const pongTables = useSelector(state => state.pongTables)
+    console.log(pongTables)
+
+
+
     //join table function
     const joinTable = function(player){
       const socket = io.connect('http://localhost:4444')
@@ -25,7 +32,8 @@ export default function Pong_Table() {
             
           })
       }, [socket])
-  return (
+    return (
+
     <div className="pong_table">
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
@@ -34,7 +42,7 @@ export default function Pong_Table() {
           <div className="player_name player_2_name"></div>
         </div>
         <div className="pong_player player_1">
-          <button onClick={joinTable}>Join</button>
+          <button onClick={()=>joinTable(1)}>Join</button>
         </div>
         <div className="pong_player player_2">
           <button>Join</button>
