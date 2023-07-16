@@ -320,6 +320,18 @@ const rootReducer = (state = initState, action) => {
             
             }
         
+        //pong
+        case "join-tablet":
+            return {
+                ...state,
+                pongTables: {
+                    ...state.pongTables,
+                    [action.payload.table]: {
+                        [action.payload.player]: 'user'
+                    }
+                }
+            
+            }
 
         default: 
             return state

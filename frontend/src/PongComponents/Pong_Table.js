@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom'
 import io from "socket.io-client"
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useDispatch } from "react-redux"
+
 
 const socket =''
 
 export default function Pong_Table() {
-    
+    const dispatch=useDispatch()
     //socket setup
     const { id  } = useParams()
     const reduxTable= 'table' + id
@@ -31,7 +33,13 @@ export default function Pong_Table() {
       socket.emit('join-tablet', {table: id, player: player})
       socket.on('join-tablet', (data)=>{
         console.log(data)
+        //prepare dispatch payload
+        let player='player'+data.player
+        let table ='table'+data.table
+        dispatch({ type: "join-tablet", payload: {table: table, player: player}})
+        console.log(pongTables)
       })
+      
     }
     
       useEffect(()=>{
