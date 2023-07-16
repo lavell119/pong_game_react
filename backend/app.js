@@ -39,10 +39,8 @@ io.on('connection', function(socket){
     socket.emit('table-joined')
     socket.on('join-tablet', (data)=>{
         console.log(data)
+        socket.emit('join-tablet', data)
     })
-
-    
-    
 })
 io.on('join-tablet', function(data){
     console.log(data)

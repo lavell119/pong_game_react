@@ -26,16 +26,18 @@ export default function Pong_Table() {
       })
     }
 
-    const joinTable2 = function(){
+    const joinTable2 = function(player){
       const socket = io.connect('http://localhost:4444')
-      socket.emit('join-tablet', {table: reduxTable})
+      socket.emit('join-tablet', {table: id, player: player})
+      socket.on('join-tablet', (data)=>{
+        console.log(data)
+      })
     }
     
       useEffect(()=>{
         if(socket)
         socket.on('table-joined', ()=>{
           console.log('steyherye')
-            
           })
       }, [socket])
     return (
@@ -48,7 +50,7 @@ export default function Pong_Table() {
           <div className="player_name player_2_name"></div>
         </div>
         <div className="pong_player player_1">
-          <button onClick={joinTable2}>Join</button>
+          <button onClick={()=>joinTable2(1)}>Join</button>
         </div>
         <div className="pong_player player_2">
           <button>Join</button>
