@@ -18,6 +18,7 @@ export default function Pong_Table() {
     const numberOfTables = useSelector(state => state.numOfTables)
 
     const pongTables = useSelector(state => state.pongTables)
+    console.log(pongTables.table2.player1)
     console.log(pongTables)
 
     //join table function
@@ -55,8 +56,8 @@ export default function Pong_Table() {
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name"></div>
-          <div className="player_name player_2_name"></div>
+          <div className="player_name player_1_name">{pongTables[reduxTable].player1}</div>
+          <div className="player_name player_2_name">{pongTables[reduxTable].player2}</div>
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>

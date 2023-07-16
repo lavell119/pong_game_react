@@ -328,7 +328,9 @@ const rootReducer = (state = initState, action) => {
                 pongTables: {
                     ...state.pongTables,
                     [action.payload.table]: {
+                        //replicate state
                         ...state.pongTables[action.payload.table],
+                        //add user to table
                         [action.payload.player]: 'user'     
                     }
                 } 
@@ -337,7 +339,6 @@ const rootReducer = (state = initState, action) => {
         default: 
             return state
     } 
-    
 }
 
 export default rootReducer
