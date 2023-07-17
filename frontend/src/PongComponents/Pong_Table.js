@@ -13,7 +13,17 @@ const tables=''
 export default function Pong_Table() {
 
     const [tables, setTables] = useState(null)
-    // useEffect(()=>setTables(tables))
+    useEffect(()=>{
+      const fetchServerTables= async() => {
+        const response = await fetch ('http://localhost:4444/tables')
+        
+        if(response.ok) {
+          setTables(response)
+        }
+      }
+      fetchServerTables()
+
+    }, [])
     const dispatch=useDispatch()
     //socket setup
     const { id  } = useParams()
