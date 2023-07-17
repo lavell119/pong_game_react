@@ -8,8 +8,12 @@ import { useDispatch } from "react-redux"
 
 
 const socket =''
+const tables=''
 
 export default function Pong_Table() {
+
+    const [tables, setTables] = useState(null)
+    // useEffect(()=>setTables(tables))
     const dispatch=useDispatch()
     //socket setup
     const { id  } = useParams()
@@ -34,12 +38,14 @@ export default function Pong_Table() {
       socket.emit('join-tablet', {table: id, player: player})
       socket.on('join-tablet', (data)=>{
         console.log(data)
+        setTables(data)
+        console.log(tables)
         //prepare dispatch payload
-        let test ="...state.table1"
-        let player='player'+data.player
-        let table ='table'+data.table
-        dispatch({ type: "join-tablet", payload: {table: table, player: player, test: test}})
-        console.log(pongTables)
+        // let test ="...state.table1"
+        // let player='player'+data.player
+        // let table ='table'+data.table
+        // dispatch({ type: "join-tablet", payload: {table: table, player: player, test: test}})
+        // console.log(pongTables)
       })
       
     }

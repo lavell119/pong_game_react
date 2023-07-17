@@ -47,6 +47,7 @@ io.on('connection', function(socket){
         console.log(table, player)
         tables[table][player]='user'
         console.log(tables)
+        socket.emit('join-tablet', tables)
     })
 })
 io.on('join-tablet', function(data){
