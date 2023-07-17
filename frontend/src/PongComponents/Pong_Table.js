@@ -15,10 +15,14 @@ export default function Pong_Table() {
     const [tables, setTables] = useState(null)
     useEffect(()=>{
       const fetchServerTables= async() => {
-        const response = await fetch ('http://localhost:4444/tables')
+        const response = await fetch("/tables")
+        const json=await response.json()
         
         if(response.ok) {
-          setTables(response)
+          console.log(json)
+        }
+        if(!response.ok) {
+          console.log('fetch error')
         }
       }
       fetchServerTables()
@@ -72,7 +76,7 @@ export default function Pong_Table() {
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name">{tables&&[reduxTable].player1}</div>
+          <div className="player_name player_1_name">{tables&&tables[reduxTable].player1}</div>
           <div className="player_name player_2_name">{tables&&tables[reduxTable].player2}</div>
         </div>
         <div className="pong_player player_1">
