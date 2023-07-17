@@ -50,8 +50,9 @@ export default function Pong_Table() {
 
     //leave table function
     const leaveTable = function(player){
-      socket.emit('leave-table')
+      socket.emit('leave-table', {table: id, player: player})
       console.log('leaving table')
+
       socket.on('table-joined', ()=>{
         console.log('taergerg')
       })
