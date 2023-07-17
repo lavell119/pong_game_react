@@ -51,6 +51,10 @@ io.on('connection', function(socket){
     })
     socket.on('leave-table', (data)=>{
         console.log('player ' + data.player + ' leaving table ' + data.table)
+        let table='table'+data.table
+        let player ='player'+data.player
+        tables[table][player]=null
+        console.log(tables)
     })
 })
 io.on('join-tablet', function(data){
