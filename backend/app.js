@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const socket = require('socket.io')
+const tables=require('./tables.js')
 
 //create express app
 const app=express()
@@ -25,6 +26,7 @@ app.use(express.json())
 //     }
 // )
 
+console.log(tables)
 const server=app.listen(4444, ()=>{
     console.log("server listening on port 4444")
 })
@@ -39,13 +41,12 @@ io.on('connection', function(socket){
     socket.emit('table-joined')
     socket.on('join-tablet', (data)=>{
         console.log(data)
-        socket.emit('join-tablet', data)
+        io.sockets.emit('join-tablet', data)
     })
 })
 io.on('join-tablet', function(data){
     console.log(data)
-}
-)
+})
 
 //controller functions
 const { signupUser, loginUser } = require('./controllers/UserController')
