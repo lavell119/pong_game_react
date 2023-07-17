@@ -44,9 +44,10 @@ io.on('connection', function(socket){
         //prepare data 
         let table='table'+data.table
         let player ='player'+data.player
+        let user = data.user
         console.log(table, player)
-        tables[table][player]='user'
-        console.log(tables)
+        tables[table][player]=user
+        // console.log(tables)
         socket.emit('join-tablet', tables)
     })
     socket.on('leave-table', (data)=>{

@@ -7,10 +7,15 @@ import { useState } from 'react'
 import { useDispatch } from "react-redux"
 
 
+
 let socket =''
 const tables=''
 
+
+
 export default function Pong_Table() {
+  const user = useSelector(state => state.pong_user)
+
 
     const [tables, setTables] = useState(null)
     useEffect(()=>{
@@ -52,7 +57,7 @@ export default function Pong_Table() {
     const leaveTable = function(player){
       socket.emit('leave-table', {table: id, player: player})
       console.log('leaving table')
-
+      
       socket.on('table-joined', ()=>{
         console.log('taergerg')
       })
@@ -60,7 +65,7 @@ export default function Pong_Table() {
 
     const joinTable2 = function(player){
       socket = io.connect('http://localhost:4444')
-      socket.emit('join-tablet', {table: id, player: player})
+      socket.emit('join-tablet', {table: id, player: player, user: user})
       socket.on('join-tablet', (data)=>{
         console.log(data)
         setTables(data)
