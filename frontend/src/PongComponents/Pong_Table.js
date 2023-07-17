@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useDispatch } from "react-redux"
 
 
-const socket =''
+let socket =''
 const tables=''
 
 export default function Pong_Table() {
@@ -20,6 +20,7 @@ export default function Pong_Table() {
         
         if(response.ok) {
           console.log(json)
+          setTables(json)
         }
         if(!response.ok) {
           console.log('fetch error')
@@ -41,14 +42,23 @@ export default function Pong_Table() {
 
     //join table function
     const joinTable = function(player){
-      const socket = io.connect('http://localhost:4444')
+      socket = io.connect('http://localhost:4444')
+      socket.on('table-joined', ()=>{
+        console.log('taergerg')
+      })
+    }
+
+    //leave table function
+    const leaveTable = function(player){
+      socket.emit('leave-table')
+      console.log('leaving table')
       socket.on('table-joined', ()=>{
         console.log('taergerg')
       })
     }
 
     const joinTable2 = function(player){
-      const socket = io.connect('http://localhost:4444')
+      socket = io.connect('http://localhost:4444')
       socket.emit('join-tablet', {table: id, player: player})
       socket.on('join-tablet', (data)=>{
         console.log(data)
@@ -81,6 +91,7 @@ export default function Pong_Table() {
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>
+          <button onClick={()=>leaveTable(1)}>Leave</button>
         </div>
         <div className="pong_player player_2">
           <button onClick={()=>joinTable2(2)}>Join</button>
