@@ -71,8 +71,19 @@ export default function Pong_Table() {
       socket.emit('join-tablet', {table: id, player: player, user: user})
       socket.on('join-tablet', (data)=>{
         console.log(data)
-        setTables(data)
-        console.log(tables)
+        setTables(data.tables)
+        let playerNum = data.playerNum
+        if(playerNum === 1){
+          setPlayer1(user)
+          console.log('player1: ',player1)
+        } else if(playerNum===2){
+          setPlayer2(user)
+          console.log('player2: ',player2)
+
+        }
+        
+        
+
         //prepare dispatch payload
         // let test ="...state.table1"
         // let player='player'+data.player
@@ -95,8 +106,8 @@ export default function Pong_Table() {
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name">{tables&&tables[reduxTable].player1.username}</div>
-          <div className="player_name player_2_name">{tables&&tables[reduxTable].player2.username}</div>
+          <div className="player_name player_1_name"></div>
+          <div className="player_name player_2_name"></div>
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>
