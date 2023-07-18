@@ -92,8 +92,8 @@ export default function Pong_Table() {
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name">{tables&&tables[reduxTable].player1}</div>
-          <div className="player_name player_2_name">{tables&&tables[reduxTable].player2}</div>
+          <div className="player_name player_1_name">{tables&&tables[reduxTable].player1.username}</div>
+          <div className="player_name player_2_name">{tables&&tables[reduxTable].player2.username}</div>
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>
