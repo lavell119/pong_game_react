@@ -15,6 +15,9 @@ const tables=''
 
 export default function Pong_Table() {
   const user = useSelector(state => state.pong_user)
+  const [player1, setPlayer1] = useState()
+  const [player2, setPlayer2] = useState()
+
 
 
     const [tables, setTables] = useState(null)
@@ -101,6 +104,8 @@ export default function Pong_Table() {
         </div>
         <div className="pong_player player_2">
           <button onClick={()=>joinTable2(2)}>Join</button>
+          <button onClick={()=>leaveTable(2)}>Leave</button>
+
         </div>
 
       </div>
