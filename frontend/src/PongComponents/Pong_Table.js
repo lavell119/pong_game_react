@@ -105,6 +105,13 @@ export default function Pong_Table() {
       })
       socket.on('leave-table', (data) => {
         console.log('leaving table data: ', data)
+        let num = data.player
+        if (num===1){
+          setPlayer1('')
+        } 
+        if(num===2){
+          setPlayer2('')
+        }
       })
     }
     
