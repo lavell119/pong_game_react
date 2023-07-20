@@ -6,8 +6,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch } from "react-redux"
 
+let socket = io.connect('http://localhost:4444')
 
-let socket =''
 
 
 export default function Pong_Table() {
@@ -38,12 +38,11 @@ export default function Pong_Table() {
           console.log('response JSON: ',json)
           //set tables to response
           setTables(json)
-          // if(tables[reduxTable].player)
-          if(tables[reduxTable].player1){
-          setPlayer1(tables[reduxTable].player1)
-          }
-          if(tables[reduxTable].player2)
-          setPlayer2(tables[reduxTable].player2)
+          //fixed api call by switching tables with json
+          let variable = json[reduxTable]
+          console.log('v = ', variable)
+          setPlayer1(variable.player1)
+          setPlayer2(variable.player2)
         }
         if(!response.ok) {
           console.log('fetch error')
@@ -67,7 +66,6 @@ export default function Pong_Table() {
 
     //join table function
     const joinTable = function(player){
-      socket = io.connect('http://localhost:4444')
       socket.on('table-joined', ()=>{
         console.log('taergerg')
       })
