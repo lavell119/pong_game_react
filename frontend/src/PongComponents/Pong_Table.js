@@ -33,10 +33,17 @@ export default function Pong_Table() {
           
         })
         const json=await response.json()
-        
         if(response.ok) {
-          console.log(json)
           
+          console.log('response JSON: ',json)
+          //set tables to response
+          setTables(json)
+          // if(tables[reduxTable].player)
+          if(tables[reduxTable].player1){
+          setPlayer1(tables[reduxTable].player1)
+          }
+          if(tables[reduxTable].player2)
+          setPlayer2(tables[reduxTable].player2)
         }
         if(!response.ok) {
           console.log('fetch error')
