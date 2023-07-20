@@ -76,6 +76,8 @@ export default function Pong_Table() {
       })
     }
 
+    
+
     const joinTable2 = function(player){
       socket = io.connect('http://localhost:4444')
       socket.emit('join-tablet', {table: id, player: player, user: user})
@@ -101,7 +103,9 @@ export default function Pong_Table() {
         // dispatch({ type: "join-tablet", payload: {table: table, player: player, test: test}})
         // console.log(pongTables)
       })
-      
+      socket.on('leave-table', (data) => {
+        console.log('leaving table data: ', data)
+      })
     }
     
       useEffect(()=>{
