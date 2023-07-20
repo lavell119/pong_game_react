@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:4444",
   "name": "react-blackjack",
   "version": "0.1.0",
   "private": true,

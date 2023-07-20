@@ -8,19 +8,35 @@ import { useDispatch } from "react-redux"
 
 
 let socket =''
-const tables=''
+
 
 export default function Pong_Table() {
 
+  const [player1, setPlayer1] = useState()
+  const [player2, setPlayer2] = useState()
+
+  let p1=false
+        let p2=false
+  const user = useSelector(state => state.pong_user)
+  // useEffect(()=>{
+  //   setPlayer1(false)
+  //   setPlayer2(false)
+  //   console.log('players set to false')
+  // },[])
     const [tables, setTables] = useState(null)
+
+    //fetch data
     useEffect(()=>{
+      
       const fetchServerTables= async() => {
-        const response = await fetch("/tables")
+        const response = await fetch("/tables", {
+          
+        })
         const json=await response.json()
         
         if(response.ok) {
           console.log(json)
-          setTables(json)
+          
         }
         if(!response.ok) {
           console.log('fetch error')
@@ -29,6 +45,8 @@ export default function Pong_Table() {
       fetchServerTables()
 
     }, [])
+
+
     const dispatch=useDispatch()
     //socket setup
     const { id  } = useParams()
@@ -60,11 +78,22 @@ export default function Pong_Table() {
 
     const joinTable2 = function(player){
       socket = io.connect('http://localhost:4444')
-      socket.emit('join-tablet', {table: id, player: player})
+      socket.emit('join-tablet', {table: id, player: player, user: user})
       socket.on('join-tablet', (data)=>{
         console.log(data)
-        setTables(data)
+        setTables(data.tables)
         console.log(tables)
+        let num = data.playerNum
+        
+        if (num===1){
+          setPlayer1(user)
+        } 
+        if(num===2){
+          setPlayer2(user)
+        }
+
+        
+        console.log('num= ',data.playerNum)
         //prepare dispatch payload
         // let test ="...state.table1"
         // let player='player'+data.player
@@ -83,12 +112,14 @@ export default function Pong_Table() {
       }, [socket])
     return (
 
+   
+
     <div className="pong_table">
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name">{tables&&tables[reduxTable].player1}</div>
-          <div className="player_name player_2_name">{tables&&tables[reduxTable].player2}</div>
+          <div className="player_name player_1_name">{player1&&player1.username}</div>
+          <div className="player_name player_2_name">{player2&&player2.username}</div>
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>
@@ -96,6 +127,8 @@ export default function Pong_Table() {
         </div>
         <div className="pong_player player_2">
           <button onClick={()=>joinTable2(2)}>Join</button>
+          <button onClick={()=>leaveTable(2)}>Leave</button>
+
         </div>
 
       </div>
