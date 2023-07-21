@@ -134,8 +134,8 @@ export default function Pong_Table() {
       <div className="table_title"><h2>Table {id}</h2></div>
       <div className="game_table">
         <div className="player_names_display">
-          <div className="player_name player_1_name">{player1&&player1.username}</div>
-          <div className="player_name player_2_name">{player2&&player2.username}</div>
+          <div className="player_name player_1_name">{player1&&<><div>{player1.username}</div><div>{player1.chipcount}</div></>}</div>
+          <div className="player_name player_2_name">{player1&&<><div>{player2.username}</div><div>{player2.chipcount}</div></>}</div>
         </div>
         <div className="pong_player player_1">
           <button onClick={()=>joinTable2(1)}>Join</button>

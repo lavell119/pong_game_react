@@ -1887,5 +1887,14 @@ input {
 .player_name {
     width: 100px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_name > div{
+    width: 80px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
