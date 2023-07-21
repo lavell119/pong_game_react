@@ -1,6 +1,5 @@
 {
   "proxy": "http://localhost:4444",
-
   "dependencies": {
     "react": "^18.2.0"
   }
