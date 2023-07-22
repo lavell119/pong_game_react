@@ -19,13 +19,11 @@ export default function Table(props) {
                     <text>{`Table ${id}`}</text>
                 </div>
                 <div className="tble">
-                    <div className="tble-plyrs-wrapper">
+                
                         <div className="plyr plyr1"></div>
                         <div className="plyr plyr2"></div>
-                        <div className="plyr plyr3"></div>
-                        <div className="plyr plyr4"></div>
-                    </div>
-                </div>s
+             
+                </div>
                 <div className="tble-footer">
                     <div className="join-btn" onClick={()=>{
                         window.open(`/table/${id}`)
