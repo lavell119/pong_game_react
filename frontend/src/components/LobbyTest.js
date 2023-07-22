@@ -13,7 +13,12 @@ let slidePostion = useSelector(state=>state.slidePosition)
 
     return (
       <>
+      <div className="lobby-test-top">
+
+      </div>
+      <div className="lobby-test-bottom">
       <LobbyTestTables />
+      </div>
       </>
     )
     

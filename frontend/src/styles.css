@@ -1555,9 +1555,8 @@ h3 {
 
 .lobby-tables-wrapper {
     width: 100%;
-    height: 50%;
+    height: 70%;
     overflow: hidden;
-    background: yellow;
 }
 
 .table-slider-controls {
@@ -1901,4 +1900,18 @@ input {
     text-align: center;
     color: white;
     margin-bottom: 20px;
+}
+
+.lobby-test-top {
+    height: 20%;
+    background: rgb(96, 96, 96);
+    width: 100%;
+}
+
+.lobby-test-bottom {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
