@@ -14,7 +14,9 @@ let slidePostion = useSelector(state=>state.slidePosition)
     return (
       <>
       <div className="lobby-test-top">
-
+        <div className="lobby-test-menu">
+          
+        </div>
       </div>
       <div className="lobby-test-bottom">
       <LobbyTestTables />
