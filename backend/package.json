@@ -1,5 +1,4 @@
 {
-  "proxy": "http://localhost:4444",
 
   "dependencies": {
     "bcrypt": "^5.1.0",

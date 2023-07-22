@@ -14,9 +14,9 @@ export default function Table(props) {
     return (            
             <div className="display-table" >
                 <div className="tble-header">
-                    <div>Stakes</div>
+                    <text>Stakes</text>
                     <text className="stakes">$1 / $2</text>
-                    <text>{id}</text>
+                    <text>{`Table ${id}`}</text>
                 </div>
                 <div className="tble">
                     <div className="tble-plyrs-wrapper">

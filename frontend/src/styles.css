@@ -915,7 +915,6 @@ slide-display-element
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-direction: center;
     justify-content: center;
 }
 

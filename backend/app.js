@@ -5,65 +5,65 @@ const tables=require('./tables.js')
 
 //create express app
 const app=express()
-// let server=""
-// let io=""
+let server=""
+let io=""
 
 //middleware
 app.use(express.json())
 
 // connect to db and start server
-// mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
-// mongoose.connect(mong_URI)
-//     .then(()=>{
-//         console.log('Connected to db')
-//         server=app.listen(4444, () => {
-//         io=socket(server)
-//         io.on('connection', function(socket){
-//             console.log('made socket connection')
-//         })
-//             console.log('listening on port 4444')
-//         })
-//     }
-// )
+mong_URI="mongodb+srv://Lavell119:synxz119@cluster0.19jswsh.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(mong_URI)
+    .then(()=>{
+        console.log('Connected to db')
+        server=app.listen(4444, () => {
+        io=socket(server)
+        io.on('connection', function(socket){
+            console.log('made socket connection')
+        })
+            console.log('listening on port 4444')
+        })
+    }
+)
 
 console.log(tables)
-const server=app.listen(4444, ()=>{
-    console.log("server listening on port 4444")
-})
+// const server=app.listen(4444, ()=>{
+//     console.log("server listening on port 4444")
+// })
 
-io=socket(server, {cors: {
-    //why it wasnt working
-    origin: '*'
-}
-})
-io.on('connection', function(socket){
-    console.log('made socket connection', socket.id)
-    socket.emit('table-joined')
-    socket.on('join-tablet', (data)=>{
-        console.log(data)
-        //prepare data 
-        let table='table'+data.table
-        let player ='player'+data.player
-        let user = data.user
-        let playerNum = data.player
-        tables[table][player]=user
-        console.log(tables)
-        // console.log(tables)
-        socket.emit('join-tablet', {tables: tables, playerNum: playerNum })
-    })
-    socket.on('leave-table', (data)=>{
-        console.log('player ' + data.player + ' leaving table ' + data.table)
-        let table='table'+data.table
-        let player ='player'+data.player
-        tables[table][player]=null
-        console.log(tables)
-        socket.emit('leave-table', data)
-    })
-})
-io.on('join-tablet', function(data){
-    console.log(data)
+// io=socket(server, {cors: {
+//     //why it wasnt working
+//     origin: '*'
+// }
+// })
+// io.on('connection', function(socket){
+//     console.log('made socket connection', socket.id)
+//     socket.emit('table-joined')
+//     socket.on('join-tablet', (data)=>{
+//         console.log(data)
+//         //prepare data 
+//         let table='table'+data.table
+//         let player ='player'+data.player
+//         let user = data.user
+//         let playerNum = data.player
+//         tables[table][player]=user
+//         console.log(tables)
+//         // console.log(tables)
+//         socket.emit('join-tablet', {tables: tables, playerNum: playerNum })
+//     })
+//     socket.on('leave-table', (data)=>{
+//         console.log('player ' + data.player + ' leaving table ' + data.table)
+//         let table='table'+data.table
+//         let player ='player'+data.player
+//         tables[table][player]=null
+//         console.log(tables)
+//         socket.emit('leave-table', data)
+//     })
+// })
+// io.on('join-tablet', function(data){
+//     console.log(data)
     
-})
+// })
 
 //controller functions
 const { signupUser, loginUser } = require('./controllers/UserController')
