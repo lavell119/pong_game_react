@@ -12,6 +12,8 @@ import { BrowserRouter, Link,  Route, Switch, Routes, Navigate } from 'react-rou
 import Navbar from './Navbar.js'
 import {useDispatch} from 'react-redux'
 import Pong_Table from '../PongComponents/Pong_Table.js'
+import LobbyTest from './LobbyTest.js'
+
 
 
 function App() {
@@ -44,6 +46,8 @@ function App() {
         <Route exact path ="/signup" element = {!user ? <Signup /> : <Navigate to= "/" />}>
         </Route>
         <Route exact path ="/table/:id" element = {<Pong_Table />}>
+        </Route>
+        <Route exact path ="/lobbytest" element = {<LobbyTest />}>
         </Route>
         {/* <Route exact path ="/table" element = {<Pong_Table />}>
         </Route> */}
