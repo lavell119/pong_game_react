@@ -1922,9 +1922,19 @@ input {
 
 .lobby-test-menu {
     position: relative;
+    border-radius: 15px;
     top: 55px;
-    background: red;
     height: 100px;
+    border: 5px solid red;
     width: 500px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lobby-test-menu div {
+    background-color: rgb(0, 47, 255);
+    height: 50px;
+    width: 50px;
 }
