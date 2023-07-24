@@ -15,11 +15,11 @@ let slidePostion = useSelector(state=>state.slidePosition)
       <>
       <div className="lobby-test-top">
         <div className="lobby-test-menu">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div className="lobby-menu-item">Lobby</div>
+          <div className="lobby-menu-item">Cashier</div>
+          <div className="lobby-menu-item">Account</div>
+          <div className="lobby-menu-item"></div>
+          <div className="lobby-menu-item"></div>
         
         </div>
       </div>
